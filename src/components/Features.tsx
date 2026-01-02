@@ -4,27 +4,27 @@ import Image from "next/image";
 const features = [
     {
         icon: "/rbvicon/1.png",
-        title: "Vet recommended",
+        title: "Vet Recommended",
         description: "Evidence‑based formulations for deworming, anti‑tick protection, joint support, gut health, skin and coat, and overall immunity.",
     },
     {
         icon: "/rbvicon/3.png",
-        title: "Bestsellers",
+        title: "Best Sellers",
         description: "FiproMed, Fluramed, ImoxiMed, and HeartMed Plus  trusted, vet‑focused formulations for dog and cat protection and wellness.",
     },
     {
         icon: "/rbvicon/2.png",
-        title: "Breed‑ & age‑specific formulas",
+        title: "Breed‑ & Age‑specific Formulas",
         description: "Tailored nutrition and supplements for playful pups, active adults, and senior companions.",
     },
     {
         icon: "/rbvicon/4.png",
-        title: "High‑protein nutrition",
+        title: "High‑Protein Nutrition",
         description: "Recipes rich in high‑quality proteins to support strength, energy, and healthy growth for both dogs and cats.",
     },
     {
         icon: "/rbvicon/5.png",
-        title: "Best quality",
+        title: "Best Quality",
         description: "Manufactured under strict international quality standards (USFDA‑linked, CGMP‑style processes) to deliver safe, consistent results for dogs and cats.",
     },
 ];

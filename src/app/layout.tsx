@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "MediZen",
   description: "Advanced Medical Services",
   icons: {
-    icon: "/logo.png",
+    icon: "/vv.png",
   },
 };
 
