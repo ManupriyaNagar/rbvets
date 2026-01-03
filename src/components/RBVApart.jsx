@@ -8,7 +8,7 @@ export default function RBVApart() {
                 {/* Left Column: Image */}
                 <div className="relative w-full lg:w-1/2 lg:min-h-0">
                     <Image
-                        src="/img.png"
+                        src="/1.jpg"
                         alt="Veterinarian with dog"
                         fill
                         className="object-cover"

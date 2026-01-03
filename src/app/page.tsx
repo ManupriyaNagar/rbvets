@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import About from "@/components/About";
 import RBVApart from "@/components/RBVApart";
+import ProductSpotlight from "@/components/ProductSpotlight";
+import Highlights from "@/components/Highlights";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <Features />
       <About />
       <RBVApart />
+      <ProductSpotlight />
+      <Highlights />
     </div>
   );
 }
