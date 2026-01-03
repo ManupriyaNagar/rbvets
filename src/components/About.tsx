@@ -23,7 +23,7 @@ export default function About() {
                             <div className="absolute -bottom-2 left-0 w-3/3 h-1.5 bg-white/30 rounded-full"></div>
                         </div>
 
-                        <div className="space-y-6 mb-12">
+                        <div className="space-y-6 mb-12 max-w-[41rem] text-justify">
                             <p className="text-lg md:text-xl font-medium leading-relaxed opacity-95">
                                 R-Biomeds Vetcare (RBV) is the dedicated pet health division of the R-Biomeds Healthcare Group, one of Asia's leading healthcare organizations.
                             </p>
@@ -38,7 +38,7 @@ export default function About() {
                 </div>
 
                 {/* Centered Overlapping Mission Badge */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30 w-full max-w-5xl px-4 flex justify-center">
+                <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 w-full max-w-7xl px-4 flex justify-center">
                     <div className="bg-white p-6 md:p-10 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center gap-8 border border-[#9444A1]/10">
                         <div className="h-16 w-16 shrink-0 rounded-2xl bg-[#9444A1]/10 flex items-center justify-center">
                             <Heart className="w-10 h-10 text-[#9444A1]" />

@@ -8,7 +8,7 @@ const funnelDisplay = Funnel_Display({
 });
 
 export const metadata: Metadata = {
-  title: "MediZen",
+  title: "RB Vetcare",
   description: "Advanced Medical Services",
   icons: {
     icon: "/vv.png",
