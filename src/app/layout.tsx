@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Funnel_Display } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const funnelDisplay = Funnel_Display({
-  variable: "--font-funnel-display",
-  subsets: ["latin"],
+const saira = localFont({
+  src: "../../public/fonts/Saira-VariableFont.ttf",
+  variable: "--font-saira",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PawCursor from "@/components/PawCursor";
 
 export default function RootLayout({
   children,
@@ -26,14 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelDisplay.variable} antialiased bg-[#9444A1] text-[#e9daea] font-sans`}
+        className={`${saira.variable} antialiased bg-[#9444A1] text-[#e9daea] font-sans`}
       >
+        <PawCursor />
         <main className="min-h-screen">
           <Header />
           {children}
           <Footer />
         </main>
-
       </body>
     </html>
   );

@@ -6,13 +6,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
     {
-        src: "/hero/1.png",
+        src: "/hero/11.png",
         alt: "Modern Medical Facility",
         title: "Advanced Healthcare Solutions",
         description: "Dedicated to your health and well-being with state-of-the-art technology.",
     },
     {
-        src: "/hero/2.png",
+        src: "/hero/22.png",
         alt: "Professional Healthcare",
         title: "Expert Medical Care",
         description: "Our team of specialists is here to provide personalized care for your needs.",
@@ -58,14 +58,14 @@ export default function Hero() {
                         className="object-cover"
                     />
                     {/* Overlay Content */}
-                    <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-4">
+                    {/* <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-4">
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 max-w-4xl animate-fade-in-up">
                             {image.title}
                         </h1>
                         <p className="text-xl text-white/90 max-w-2xl mb-8 animate-fade-in-up delay-200">
                             {image.description}
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             ))}
 

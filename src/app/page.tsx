@@ -5,16 +5,20 @@ import About from "@/components/About";
 import RBVApart from "@/components/RBVApart";
 import ProductSpotlight from "@/components/ProductSpotlight";
 import Highlights from "@/components/Highlights";
+import Feedback from "@/components/Feedback";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div>
       <Hero />
       <Features />
-      <About />
+      <div id="about" className="scroll-mt-20"><About /></div>
+
       <RBVApart />
-      <ProductSpotlight />
+      <div id="products" className="scroll-mt-20">   <ProductSpotlight /></div>
+
       <Highlights />
+      <Feedback />
     </div>
   );
 }

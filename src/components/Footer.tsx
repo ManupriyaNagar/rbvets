@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="relative bg-[#9444A1] pt-12 pb-8 overflow-hidden">
+        <footer id="contact" className="relative bg-[#9444A1] pt-12 pb-8 overflow-hidden">
             {/* Background Pulse/Heartbeat Effect Placeholder */}
             <div className="absolute top-0 left-0 w-full h-64 opacity-20 pointer-events-none">
                 <svg viewBox="0 0 1000 100" className="w-full h-full stroke-white/20 fill-none" preserveAspectRatio="none">
@@ -14,19 +14,15 @@ export default function Footer() {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Newsletter Section */}
-                <div className="max-w-4xl mx-auto mb-4">
+                <div className="max-w-6xl mx-auto mb-4">
                     <div className="flex flex-col md:flex-row items-center  gap-8 text-center">
-
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready To Turn Dreams Into Reality</h2>
-                            <h3 className="text-3xl md:text-5xl font-bold">Subscribe to Our Newsletter</h3>
-
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4">96% of pet owners consider pets part of their family and RBV exists to protect that family bond.</h2>
                         </div>
-
                     </div>
 
-                    <div className="mt-8 relative max-w-2xl">
-                        <div className="flex items-center bg-[#953490]/20 border border-white/10 rounded-full p-2 pl-6 backdrop-blur-sm">
+                    <div className="mt-8 relative max-w-2xl mx-auto">
+                        <div className="flex items-center bg-[#953490]/20 border border-white/50 rounded-full p-2 pl-6 backdrop-blur-sm">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
@@ -58,10 +54,8 @@ export default function Footer() {
                                 Medical services are an essential part of our lives, offering care and treatment for various health conditions
                             </p>
                             <div className="flex gap-4">
-                                <SocialIcon icon={<Facebook className="w-4 h-4" />} />
-                                <SocialIcon icon={<Linkedin className="w-4 h-4" />} />
-                                <SocialIcon icon={<Instagram className="w-4 h-4" />} />
-                                <SocialIcon icon={<Twitter className="w-4 h-4" />} />
+                                <SocialIcon icon={<Facebook className="w-6 h-6" />} href="https://www.facebook.com/rbvetcare/about/" target="_blank" />
+                                <SocialIcon icon={<Instagram className="w-6 h-6" />} href="https://www.instagram.com/rbv_canada?igsh=MWI1MDB1eGp2d2Niag==" target="_blank" />
                             </div>
                         </div>
 
@@ -69,11 +63,11 @@ export default function Footer() {
                         <div>
                             <h4 className="text-xl font-bold mb-8">Page</h4>
                             <ul className="space-y-4">
-                                <FooterLink href="/about">About Us</FooterLink>
-                                <FooterLink href="/services">Services</FooterLink>
-                                <FooterLink href="/why-choose-us">Why Chose Us</FooterLink>
-                                <FooterLink href="/doctors">Doctors</FooterLink>
-                                <FooterLink href="/blog">Blog And News</FooterLink>
+                                <FooterLink href="#about">About Us</FooterLink>
+                                <FooterLink href="#services">Services</FooterLink>
+                                <FooterLink href="#why-choose-us">Why Chose Us</FooterLink>
+                                <FooterLink href="#doctors">Doctors</FooterLink>
+                                <FooterLink href="#blog">Blog And News</FooterLink>
                             </ul>
                         </div>
 
@@ -81,10 +75,10 @@ export default function Footer() {
                         <div>
                             <h4 className="text-xl font-bold mb-8">Link</h4>
                             <ul className="space-y-4">
-                                <FooterLink href="/terms">Trems & Condition</FooterLink>
-                                <FooterLink href="/privacy">Privacy Policy</FooterLink>
-                                <FooterLink href="/contact">Contact Us</FooterLink>
-                                <FooterLink href="/terms-of-use">Treams Of Use</FooterLink>
+                                <FooterLink href="#terms">Trems & Condition</FooterLink>
+                                <FooterLink href="#privacy">Privacy Policy</FooterLink>
+                                <FooterLink href="#contact">Contact Us</FooterLink>
+                                <FooterLink href="#terms-of-use">Treams Of Use</FooterLink>
                             </ul>
                         </div>
 
@@ -121,9 +115,14 @@ export default function Footer() {
     );
 }
 
-function SocialIcon({ icon }: { icon: React.ReactNode }) {
+function SocialIcon({ icon, href, target }: { icon: React.ReactNode, href: string, target?: string }) {
     return (
-        <Link href="#" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#d7a463] hover:text-black transition-all">
+        <Link
+            href={href}
+            target={target}
+            rel={target === "_blank" ? "noopener noreferrer" : undefined}
+            className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gray-100 hover:text-black transition-all"
+        >
             {icon}
         </Link>
     );

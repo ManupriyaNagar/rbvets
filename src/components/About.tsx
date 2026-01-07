@@ -3,12 +3,12 @@ import { Play, Heart } from "lucide-react";
 
 export default function About() {
     return (
-        <section id="about" className="relative w-full bg-white">
+        <section className="relative w-full bg-white">
             <div className="flex flex-col lg:flex-row h-[90vh] relative">
                 {/* Left Column: Image */}
                 <div className="relative w-full lg:w-1/2 lg:min-h-0">
                     <Image
-                        src="/img.png"
+                        src="/about.png"
                         alt="Veterinarian with dog"
                         fill
                         className="object-cover"

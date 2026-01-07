@@ -19,9 +19,17 @@
   --color-brand-purple: var(--brand-purple);
   --color-brand-gold: var(--brand-gold);
   --color-footer-bg: var(--footer-bg);
-  --font-sans: var(--font-funnel-display), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-saira), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  font-family: var(--font-funnel-display), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-saira), ui-sans-serif, system-ui, sans-serif;
+  cursor: none;
+}
+
+a,
+button,
+[role="button"],
+.cursor-pointer {
+  cursor: none !important;
 }

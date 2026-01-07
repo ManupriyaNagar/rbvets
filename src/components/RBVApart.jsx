@@ -8,7 +8,7 @@ export default function RBVApart() {
                 {/* Left Column: Image */}
                 <div className="relative w-full lg:w-1/2 lg:min-h-0">
                     <Image
-                        src="/1.jpg"
+                        src="/rbvets.png"
                         alt="Veterinarian with dog"
                         fill
                         className="object-cover"
@@ -29,11 +29,11 @@ export default function RBVApart() {
 
                             {/* Timeline Item 1 */}
                             <div className="relative flex items-start gap-5 group">
-                                <div className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
+                                <div className="peer relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
                                     <ShieldCheck size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1">Global quality assurance</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Global quality assurance</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         Products manufactured in certified, USFDA‑registered and CGMP‑compliant facilities, following strict international safety protocols.
                                     </p>
@@ -42,11 +42,11 @@ export default function RBVApart() {
 
                             {/* Timeline Item 2 */}
                             <div className="relative flex items-start gap-5 group">
-                                <div className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
+                                <div className="peer relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
                                     <PawPrint size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1">Vet‑formulated care</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Vet‑formulated care</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         Globally certified, science‑based treatments, supplements, and premium pet cosmetics developed with veterinary professionals.
                                     </p>
@@ -55,11 +55,11 @@ export default function RBVApart() {
 
                             {/* Timeline Item 3 */}
                             <div className="relative flex items-start gap-5 group">
-                                <div className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
+                                <div className="peer relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
                                     <FlaskConical size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1">Science‑driven innovation</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Science‑driven innovation</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         Formulas created and validated with veterinary experts, combining evidence‑based actives with pet‑friendly flavours and textures.
                                     </p>
@@ -68,11 +68,11 @@ export default function RBVApart() {
 
                             {/* Timeline Item 4 */}
                             <div className="relative flex items-start gap-5 group">
-                                <div className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
+                                <div className="peer relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
                                     <Globe size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1">Asia‑wide presence</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Asia‑wide presence</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         A trusted partner to vets, retailers, and distributors across Asia, backed by strong Canadian heritage and regional market expertise.
                                     </p>
@@ -81,11 +81,11 @@ export default function RBVApart() {
 
                             {/* Timeline Item 5 */}
                             <div className="relative flex items-start gap-5 group">
-                                <div className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
+                                <div className="peer relative z-10 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#9444A1]/20 bg-white text-[#9444A1] shrink-0 shadow-lg transition-transform group-hover:scale-110">
                                     <Award size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1">Proven trust</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Proven trust</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         A proud member of R‑Biomeds Healthcare Group, one of Asia’s leading healthcare organizations, trusted by vets and retailers.
                                     </p>
@@ -98,10 +98,9 @@ export default function RBVApart() {
                 {/* Centered Overlapping Mission Badge */}
                 <div className="absolute bottom-24 right-1/2 translate-x-2 z-30 w-[42rem] px-2 flex justify-center">
                     <div className="bg-white p-6 md:p-8 rounded-l-3xl shadow-2xl flex flex-col md:flex-row items-center border border-[#9444A1]/10">
-
                         <div>
-                            <p className="text-lg md:text-2xl font-bold text-gray-900 leading-tight mb-2">
-                                96% of pet owners consider pets part of their family and RBV exists to protect that family bond.
+                            <p className="text-lg md:text-2xl font-bold text-gray-900 leading-tight mb-2 hover:text-[#9444A1]">
+                                74% of pet owners are willing to invest more in foods with added health benefits, so our formulas combine taste with targeted wellness support.
                             </p>
                         </div>
                     </div>
