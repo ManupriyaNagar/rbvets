@@ -59,7 +59,7 @@ export default function ComparePage() {
                         </div>
 
                         <h1 className="text-3xl md:text-4xl font-bold text-black mb-6 leading-tight">
-                            FluroMed <span className="text-3xl font-medium">(Fluralaner Chewable Tablets)</span>
+                            FluraMed <span className="text-3xl font-medium">(Fluralaner Chewable Tablets)</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed max-w-4xl px-4">
                             Say goodbye to the monthly hassle of <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">flea</span> and  <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">tick</span> treatments!
