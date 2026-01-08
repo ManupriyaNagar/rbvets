@@ -51,7 +51,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <p className=" mb-8 leading-relaxed">
-                                Medical services are an essential part of our lives, offering care and treatment for various health conditions
+                                Rooted in Canadian innovation and global quality standards, RBV delivers premium veterinary healthcare, nutrition, and wellness products for dogs and cats.
                             </p>
                             <div className="flex gap-4">
                                 <SocialIcon icon={<Facebook className="w-6 h-6" />} href="https://www.facebook.com/rbvetcare/about/" target="_blank" />

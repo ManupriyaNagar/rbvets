@@ -107,13 +107,11 @@ const SlidingCard = ({ slides, bgColor }: { slides: Slide[], bgColor: string }) 
                                 onClick={nextSlide}
                                 className=" mb-8 group/btn flex items-center gap-2 bg-[#9444A1] text-white px-6 py-2 rounded-full font-bold hover:bg-[#4A1952] transition-all transform hover:scale-105 active:scale-95 shadow-md"
                             >
-                                View Next Feature
+                                {slides[currentSlide].tagline1}
                                 <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
                             </button>
                         )}
-                        <span className="text-[#9444A1] font-bold text-sm uppercase tracking-wider mb-2">
-                            {slides[currentSlide].tagline1}
-                        </span>
+
                         <h3 className="text-xl md:text-2xl font-bold text-[#4A1952] leading-snug mb-4">
                             {slides[currentSlide].title}
                         </h3>

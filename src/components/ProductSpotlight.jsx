@@ -33,13 +33,7 @@ export default function ProductSpotlight() {
                     <div className="w-full lg:w-2/5 bg-white  overflow-hidden flex flex-col shadow-sm border border-gray-100 transition-all hover:shadow-2xl duration-300">
                         {/* Product Image Area */}
                         <div className="h-64 md:h-full  bg-gray-100 flex items-center justify-center relative overflow-hidden ">
-                            {/* <Image
-                                src="/p.png" // Using existing image as placeholder
-                                alt="Featured Product"
-                                width={400}
-                                height={400}
-                                className="object-cover transition-transform duration-500 "
-                            /> */}
+
                             <img src="/p.png" alt="" className="object-cover transition-transform duration-500 " />
                         </div>
 

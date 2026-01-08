@@ -12,11 +12,13 @@ export default function Home() {
     <div>
       <Hero />
       <Features />
-      <div id="about" className="scroll-mt-20"><About /></div>
-
+      <div id="about" className="scroll-mt-20">
+        <About />
+      </div>
       <RBVApart />
-      <div id="products" className="scroll-mt-20">   <ProductSpotlight /></div>
-
+      <div id="products" className="scroll-mt-20">
+        <ProductSpotlight />
+      </div>
       <Highlights />
       <Feedback />
     </div>

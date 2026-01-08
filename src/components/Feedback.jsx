@@ -5,63 +5,63 @@ import { motion } from 'framer-motion';
 const feedbacks = [
     {
         id: 1,
-        name: "David Mark",
+        name: "Sopheaktra Nou",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "FiproMed Duo is convenient and effective. The spot-on application is simple, and it helps maintain consistent flea and tick control without stressing my pets."
     },
     {
         id: 2,
-        name: "Jessica Kyle",
+        name: "Rithy Chea",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "FluraMed offers long-lasting protection with just one dose. It has made parasite prevention easier and more reliable for my dog throughout the month."
     },
     {
         id: 3,
-        name: "William Brown",
+        name: "Dr. Sovannara Heng",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "RB Vetcare products are well-formulated and trustworthy. They deliver consistent results, making them suitable for routine parasite prevention in clinical practice."
     },
     {
         id: 4,
-        name: "Sarah Jenkins",
+        name: "Dara Keo",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "ImoxiMed is ideal for cats that dislike oral medicines. It is easy to apply and provides reliable protection against common parasites."
     },
     {
         id: 5,
-        name: "Michael Scott",
+        name: "Pisey Chhun",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "Using FluraMed has reduced the stress of frequent parasite treatments. One dose lasts weeks and keeps my dog comfortable and protected."
     },
     {
         id: 6,
-        name: "David Mark",
+        name: "Borey Sok",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "FiproMed Duo has been dependable for monthly parasite control. Even after bathing, it continues to protect my pets from fleas and ticks."
     },
     {
         id: 7,
-        name: "Jessica Kyle",
+        name: "Malis Touch",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "ImoxiMed worked effectively for my cat. The spot-on application was simple, and scratching reduced noticeably within a few days of use."
     },
     {
         id: 8,
-        name: "William Brown",
+        name: "Vannak Lim",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "My dog usually avoids treatments, but FluraMed was easy to give. I noticed fewer ticks quickly, and the protection lasts much longer."
     },
     {
         id: 9,
-        name: "Sarah Jenkins",
+        name: "Dr. Sreyneang Phan",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "I regularly recommend FiproMed Duo because it is easy to apply, reliable, and provides consistent flea and tick protection for dogs and cats."
     },
     {
         id: 10,
-        name: "Michael Scott",
+        name: "Sokha Chan",
         image: "/img.png",
-        text: "Boromirs destroy perils bilbo baggins regain seems wider by treebeard quietly faced hesitate fire breathing value fisherman thinks gollum's stove call shake therefore has taken."
+        text: "FluraMed has simplified parasite control for my dog. One chew provides long-lasting protection, saves time, and gives me complete peace of mind every month."
     }
 ];
 

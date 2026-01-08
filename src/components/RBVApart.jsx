@@ -33,7 +33,7 @@ export default function RBVApart() {
                                     <ShieldCheck size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Global quality assurance</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Global quality assurance</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         Products manufactured in certified, USFDA‑registered and CGMP‑compliant facilities, following strict international safety protocols.
                                     </p>
@@ -46,7 +46,7 @@ export default function RBVApart() {
                                     <PawPrint size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Vet‑formulated care</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Vet‑formulated care</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         Globally certified, science‑based treatments, supplements, and premium pet cosmetics developed with veterinary professionals.
                                     </p>
@@ -59,7 +59,7 @@ export default function RBVApart() {
                                     <FlaskConical size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Science‑driven innovation</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Science‑driven innovation</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         Formulas created and validated with veterinary experts, combining evidence‑based actives with pet‑friendly flavours and textures.
                                     </p>
@@ -72,7 +72,7 @@ export default function RBVApart() {
                                     <Globe size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Asia‑wide presence</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Asia‑wide presence</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         A trusted partner to vets, retailers, and distributors across Asia, backed by strong Canadian heritage and regional market expertise.
                                     </p>
@@ -85,7 +85,7 @@ export default function RBVApart() {
                                     <Award size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors">Proven trust</h3>
+                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Proven trust</h3>
                                     <p className="text-sm md:text-base opacity-85 leading-relaxed">
                                         A proud member of R‑Biomeds Healthcare Group, one of Asia’s leading healthcare organizations, trusted by vets and retailers.
                                     </p>
