@@ -64,10 +64,13 @@ export default function Footer() {
                             <h4 className="text-xl font-bold mb-8">Page</h4>
                             <ul className="space-y-4">
                                 <FooterLink href="#about">About Us</FooterLink>
-                                <FooterLink href="#services">Services</FooterLink>
-                                <FooterLink href="#why-choose-us">Why Chose Us</FooterLink>
-                                <FooterLink href="#doctors">Doctors</FooterLink>
-                                <FooterLink href="#blog">Blog And News</FooterLink>
+                                {/* <FooterLink href="#services">Products</FooterLink> */}
+                                <FooterLink href="#products">Flura Med
+                                    (Fluralaner Chewable Tablets)</FooterLink>
+                                <FooterLink href="#products">FiproMed Duo
+                                    (Spot-on Solution)</FooterLink>
+                                <FooterLink href="#products">ImoxiMed
+                                    (Spot-on Solution)</FooterLink>
                             </ul>
                         </div>
 
