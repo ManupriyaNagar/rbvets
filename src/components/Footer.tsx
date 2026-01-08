@@ -92,17 +92,21 @@ export default function Footer() {
                                 <ContactItem
                                     icon={<MapPin className="w-5 h-5" />}
                                     label="Address"
-                                    value="abc ghaziabad,India"
+                                    value="
+Yangon, Myanmar
+Global Operational Presence
+
+"
                                 />
                                 <ContactItem
                                     icon={<Phone className="w-5 h-5" />}
                                     label="Phone Number"
-                                    value="012 345 678 9101"
+                                    value="+959979386000"
                                 />
                                 <ContactItem
                                     icon={<Mail className="w-5 h-5" />}
                                     label="Email"
-                                    value="abcd@gmail.com"
+                                    value="info@abcinternational.com"
                                 />
                             </div>
                         </div>

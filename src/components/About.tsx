@@ -23,7 +23,7 @@ export default function About() {
                             <div className="absolute -bottom-2 left-0 w-3/3 h-1.5 bg-white/30 rounded-full"></div>
                         </div>
 
-                        <div className="space-y-6 mb-12 max-w-[41rem] text-justify">
+                        <div className="space-y-6 mb-12 max-w-[40rem] text-justify">
                             <p className="text-lg md:text-xl font-medium leading-relaxed opacity-95">
                                 R-Biomeds Vetcare (RBV) is the dedicated pet health division of the R-Biomeds Healthcare Group, one of Asia's leading healthcare organizations.
                             </p>
