@@ -6,61 +6,61 @@ const feedbacks = [
     {
         id: 1,
         name: "Sopheaktra Nou",
-        image: "/img.png",
+        image: "/f.png",
         text: "FiproMed Duo is convenient and effective. The spot-on application is simple, and it helps maintain consistent flea and tick control without stressing my pets."
     },
     {
         id: 2,
         name: "Rithy Chea",
-        image: "/img.png",
+        image: "/f.png",
         text: "FluraMed offers long-lasting protection with just one dose. It has made parasite prevention easier and more reliable for my dog throughout the month."
     },
     {
         id: 3,
         name: "Dr. Sovannara Heng",
-        image: "/img.png",
+        image: "/f.png",
         text: "RB Vetcare products are well-formulated and trustworthy. They deliver consistent results, making them suitable for routine parasite prevention in clinical practice."
     },
     {
         id: 4,
         name: "Dara Keo",
-        image: "/img.png",
+        image: "/f.png",
         text: "ImoxiMed is ideal for cats that dislike oral medicines. It is easy to apply and provides reliable protection against common parasites."
     },
     {
         id: 5,
         name: "Pisey Chhun",
-        image: "/img.png",
+        image: "/f.png",
         text: "Using FluraMed has reduced the stress of frequent parasite treatments. One dose lasts weeks and keeps my dog comfortable and protected."
     },
     {
         id: 6,
         name: "Borey Sok",
-        image: "/img.png",
+        image: "/f.png",
         text: "FiproMed Duo has been dependable for monthly parasite control. Even after bathing, it continues to protect my pets from fleas and ticks."
     },
     {
         id: 7,
         name: "Malis Touch",
-        image: "/img.png",
+        image: "/f.png",
         text: "ImoxiMed worked effectively for my cat. The spot-on application was simple, and scratching reduced noticeably within a few days of use."
     },
     {
         id: 8,
         name: "Vannak Lim",
-        image: "/img.png",
+        image: "/f.png",
         text: "My dog usually avoids treatments, but FluraMed was easy to give. I noticed fewer ticks quickly, and the protection lasts much longer."
     },
     {
         id: 9,
         name: "Dr. Sreyneang Phan",
-        image: "/img.png",
+        image: "/f.png",
         text: "I regularly recommend FiproMed Duo because it is easy to apply, reliable, and provides consistent flea and tick protection for dogs and cats."
     },
     {
         id: 10,
         name: "Sokha Chan",
-        image: "/img.png",
+        image: "/f.png",
         text: "FluraMed has simplified parasite control for my dog. One chew provides long-lasting protection, saves time, and gives me complete peace of mind every month."
     }
 ];
