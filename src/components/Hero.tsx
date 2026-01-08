@@ -50,7 +50,7 @@ export default function Hero() {
                         alt={image.alt}
                         fill
                         priority={index === 0}
-                        className="object-cover"
+                        className=""
                     />
                     {/* Overlay Content */}
                     {/* <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-4">
