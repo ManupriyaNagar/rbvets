@@ -17,12 +17,7 @@ const images = [
         title: "Expert Medical Care",
         description: "Our team of specialists is here to provide personalized care for your needs.",
     },
-    {
-        src: "/hero/3.png",
-        alt: "Medical Technology",
-        title: "Precision Medicine",
-        description: "Using the latest diagnostic tools to ensure accurate and effective treatments.",
-    },
+
 ];
 
 export default function Hero() {
