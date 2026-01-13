@@ -64,7 +64,7 @@ export default function Highlights() {
 
                             {/* Bottom Image */}
                             <div className="mt-auto px-6 pb-6">
-                                <div className="relative h-86 w-86 rounded-2xl overflow-hidden shadow-inner">
+                                <div className="relative h-86 w-86 2xl:w-full 2xl:h-96 rounded-2xl overflow-hidden shadow-inner">
                                     <Image
                                         src={item.image}
                                         alt={item.title}

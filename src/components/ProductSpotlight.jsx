@@ -16,7 +16,7 @@ export default function ProductSpotlight() {
                             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                                 Product Spotlight
                             </h2>
-                            <p className="text-lg md:text-xl opacity-90 mb-10 leading-relaxed">
+                            <p className="text-lg md:text-xl 2xl:text-2xl opacity-90 mb-10 leading-relaxed">
                                 World‑class pet medicines, nutrition, and wellness solutions for dogs and cats – trusted by vets and loved by pet parents across Asia.
                             </p>
                             <Link
@@ -32,9 +32,9 @@ export default function ProductSpotlight() {
                     {/* Right Column: Product Featured Card */}
                     <div className="w-full lg:w-2/5 bg-white  overflow-hidden flex flex-col shadow-sm border border-gray-100 transition-all hover:shadow-2xl duration-300">
                         {/* Product Image Area */}
-                        <div className="h-64 md:h-full  bg-gray-100 flex items-center justify-center relative overflow-hidden ">
+                        <div className="h-64 md:h-full 2xl:w-full  bg-gray-100 flex items-center justify-center relative overflow-hidden ">
 
-                            <img src="/p.png" alt="" className="object-cover transition-transform duration-500 " />
+                            <img src="/p.png" alt="" className="md:object-cover w-full h-full transition-transform duration-500 " />
                         </div>
 
                         {/* Product Info Area */}

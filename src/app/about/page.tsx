@@ -9,7 +9,7 @@ export default function AboutPage() {
                 <div className="container mx-auto ">
                     <div className="flex flex-col items-center text-center  mx-auto">
                         <div className="relative w-full mb-12 flex justify-center items-center gap-4">
-                            <div className="shadow-sm relative w-full max-w-7xl h-64 md:h-[300px] z-10">
+                            <div className="shadow-sm relative w-full  h-64 md:h-[300px] 2xl:h-[350px] z-10">
                                 <Image
                                     src="/bgimoxi.png"
                                     alt="RBV Main Product"
@@ -36,7 +36,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                         {/* Card 1 */}
                         <div className="flex flex-col rounded-[2.5rem] bg-[#f0f9ff] overflow-hidden shadow-sm transition-all hover:shadow-xl group">
-                            <div className="relative h-64 w-full overflow-hidden">
+                            <div className="relative md:h-64 2xl:h-98 w-full overflow-hidden">
                                 {/* Primary Image */}
                                 <Image
                                     src="/about/211.jpg"
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
                         {/* Card 2 */}
                         <div className="flex flex-col rounded-[2.5rem] bg-[#f0fdf4] overflow-hidden shadow-sm transition-all hover:shadow-xl group">
-                            <div className="relative h-64 w-full overflow-hidden">
+                            <div className="relative h-64 2xl:h-98 w-full overflow-hidden">
                                 {/* Primary Image */}
                                 <Image
                                     src="/about/222.jpg"
@@ -93,12 +93,12 @@ export default function AboutPage() {
 
                         {/* Card 3 */}
                         <div className="flex  col-span-2 rounded-[2.5rem] bg-[#faf5ff] overflow-hidden shadow-sm transition-all hover:shadow-xl group">
-                            <div className="relative h-full w-full overflow-hidden">
+                            <div className="relative h-full 2xl:h-[60vh] w-full overflow-hidden">
                                 <Image
                                     src="/imoxii.png"
                                     alt="Lyme Protection"
                                     fill
-                                    className="object-cover transition-transform duration-700"
+                                    className="md:object-cover 2xl:object-cover transition-transform duration-700"
                                 />
 
                             </div>

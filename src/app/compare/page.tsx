@@ -47,13 +47,13 @@ export default function ComparePage() {
             <section className="py-8 bg-gray-50 overflow-hidden font-sans">
                 <div className="container mx-auto">
                     <div className="flex flex-col items-center text-center mx-auto">
-                        <div className="relative w-full shadow-md mb-12 flex justify-center items-center gap-4">
-                            <div className="relative w-full max-w-7xl h-64 md:h-[300px] z-10">
+                        <div className="relative w-full  mb-12 flex justify-center items-center gap-4">
+                            <div className="relative w-full h-64 md:h-[300px] 2xl:h-[400px] z-10">
                                 <Image
                                     src="/bgflura.png"
                                     alt="RBV Main Product"
                                     fill
-                                    className="w-full object-cover"
+                                    className="w-full md:object-cover 2xl:object-contain"
                                 />
                             </div>
                         </div>

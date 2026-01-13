@@ -46,8 +46,14 @@ export default function Features() {
                             key={index}
                             className="group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                         >
-                            <div className="mb-6 p-4 rounded-2xl bg-white w-fit transition-colors">
-                                <Image src={feature.icon} alt={feature.title} width={100} height={100} />
+                            <div className="mb-6 p-4 rounded-2xl bg-white w-fit mx-auto transition-colors">
+                                <Image
+                                    src={feature.icon}
+                                    alt={feature.title}
+                                    width={100}
+                                    height={100}
+                                    className="w-[100px] h-[100px] 2xl:w-[200px] 2xl:h-[150px]"
+                                />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                             <p className="text-gray-600 text-sm leading-relaxed">

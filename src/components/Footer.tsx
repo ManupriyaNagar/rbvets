@@ -63,13 +63,13 @@ export default function Footer() {
                         <div>
                             <h4 className="text-xl font-bold mb-8">Page</h4>
                             <ul className="space-y-4">
-                                <FooterLink href="#about">About Us</FooterLink>
+                                <FooterLink href="/#about">About Us</FooterLink>
                                 {/* <FooterLink href="#services">Products</FooterLink> */}
-                                <FooterLink href="#products">Flura Med
+                                <FooterLink href="/compare">Flura Med
                                     (Fluralaner Chewable Tablets)</FooterLink>
-                                <FooterLink href="#products">FiproMed Duo
+                                <FooterLink href="/rewards">FiproMed Duo
                                     (Spot-on Solution)</FooterLink>
-                                <FooterLink href="#products">ImoxiMed
+                                <FooterLink href="/about">ImoxiMed
                                     (Spot-on Solution)</FooterLink>
                             </ul>
                         </div>
@@ -78,10 +78,10 @@ export default function Footer() {
                         <div>
                             <h4 className="text-xl font-bold mb-8">Link</h4>
                             <ul className="space-y-4">
-                                <FooterLink href="#terms">Trems & Condition</FooterLink>
-                                <FooterLink href="#privacy">Privacy Policy</FooterLink>
-                                <FooterLink href="#contact">Contact Us</FooterLink>
-                                <FooterLink href="#terms-of-use">Treams Of Use</FooterLink>
+                                <FooterLink href="/#terms">Trems & Condition</FooterLink>
+                                <FooterLink href="/#privacy">Privacy Policy</FooterLink>
+                                <FooterLink href="/#contact">Contact Us</FooterLink>
+                                <FooterLink href="/#terms-of-use">Treams Of Use</FooterLink>
                             </ul>
                         </div>
 

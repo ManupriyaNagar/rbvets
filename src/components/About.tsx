@@ -19,18 +19,18 @@ export default function About() {
                 <div className="w-full lg:w-1/2 bg-[#9444A1] p-12 md:p-10 flex flex-col  text-white">
                     <div className="max-w-2xl ">
                         <div className="relative inline-block mb-8 mt-10 ">
-                            <h2 className="text-3xl md:text-5xl font-bold">About R-Biomeds Vetcare</h2>
+                            <h2 className="text-3xl  md:text-5xl font-bold">About R-Biomeds Vetcare</h2>
                             <div className="absolute -bottom-2 left-0 w-3/3 h-1.5 bg-white/30 rounded-full"></div>
                         </div>
 
-                        <div className="space-y-6 mb-12 max-w-[40rem] text-justify">
-                            <p className="text-lg md:text-xl font-medium leading-relaxed opacity-95">
+                        <div className="space-y-6 mb-12 max-w-[40rem] 2xl:max-w-full text-justify">
+                            <p className="text-lg md:text-xl 2xl:text-2xl font-medium leading-relaxed opacity-95">
                                 R-Biomeds Vetcare (RBV) is the dedicated pet health division of the R-Biomeds Healthcare Group, one of Asia's leading healthcare organizations.
                             </p>
-                            <p className="text-base opacity-85 leading-relaxed">
+                            <p className="text-base 2xl:text-xl opacity-85 leading-relaxed">
                                 Rooted in Canadian innovation and global quality standards, RBV delivers premium veterinary healthcare, nutrition, and wellness products for dogs and cats.
                             </p>
-                            <p className="text-base opacity-85 leading-relaxed">
+                            <p className="text-base  2xl:text-xl opacity-85 leading-relaxed">
                                 RBV bridges advanced science with everyday pet care, making clinical-grade solutions accessible and affordable to families across Asia and beyond.
                             </p>
                         </div>
@@ -45,10 +45,10 @@ export default function About() {
                         </div>
                         <div>
                             <h4 className="text-[#9444A1] font-bold uppercase tracking-widest text-sm mb-2">Our Mission</h4>
-                            <p className="text-lg md:text-2xl font-bold text-gray-900 leading-tight mb-2">
+                            <p className="text-lg md:text-2xl  font-bold text-gray-900 leading-tight mb-2">
                                 To make world-class pet medicines, nutrition, and lifestyle solutions accessible and affordable to every pet parent.
                             </p>
-                            <p className="text-base opacity-85 leading-relaxed text-black">
+                            <p className="text-base 2xl:text-md opacity-85 leading-relaxed text-black">
                                 RBV is committed to closing the gap between cutting‑edge research and real‑world pet care, because pets deserve better every day.
                             </p>
                         </div>

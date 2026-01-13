@@ -4,7 +4,7 @@ import { Dog, PawPrint, Syringe, ShieldCheck, FlaskConical, Globe, Award } from 
 export default function RBVApart() {
     return (
         <section id="about" className="relative w-full bg-white">
-            <div className="flex flex-col lg:flex-row h-[90vh] relative">
+            <div className="flex flex-col lg:flex-row h-[90vh] 2xl:h-full relative">
                 {/* Left Column: Image */}
                 <div className="relative w-full lg:w-1/2 lg:min-h-0">
                     <Image
@@ -16,11 +16,11 @@ export default function RBVApart() {
                 </div>
 
                 {/* Right Column: Content & Brand Background */}
-                <div className="w-full lg:w-1/2 bg-white  p-12 md:p-10 flex flex-col  text-black">
-                    <div className="max-w-2xl ">
+                <div className="w-full lg:w-1/2 bg-white  md:p-12 p-10 flex flex-col  text-black">
+                    <div className="md:max-w-2xl  2xl:max-w-2xl 2xl:text-justify">
                         <div className="relative inline-block mb-8">
-                            <h2 className="text-3xl md:text-5xl font-bold">What Sets RBV Apart</h2>
-                            <div className="absolute -bottom-2 left-0 w-3/3 h-1.5 bg-white/30 rounded-full"></div>
+                            <h2 className="text-3xl md:text-5xl 2xl:text-5xl font-bold">What Sets RBV Apart</h2>
+
                         </div>
 
                         <div className="relative space-y-6">
@@ -33,8 +33,8 @@ export default function RBVApart() {
                                     <ShieldCheck size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Global quality assurance</h3>
-                                    <p className="text-sm md:text-base opacity-85 leading-relaxed">
+                                    <h3 className="text-xl 2xl:text-2xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Global quality assurance</h3>
+                                    <p className="text-sm md:text-base 2xl:text-xl opacity-85 leading-relaxed">
                                         Products manufactured in certified, USFDA‑registered and CGMP‑compliant facilities, following strict international safety protocols.
                                     </p>
                                 </div>
@@ -46,8 +46,8 @@ export default function RBVApart() {
                                     <PawPrint size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Vet‑formulated care</h3>
-                                    <p className="text-sm md:text-base opacity-85 leading-relaxed">
+                                    <h3 className="text-xl font-bold 2xl:text-2xl mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Vet‑formulated care</h3>
+                                    <p className="text-sm md:text-base 2xl:text-xl opacity-85 leading-relaxed">
                                         Globally certified, science‑based treatments, supplements, and premium pet cosmetics developed with veterinary professionals.
                                     </p>
                                 </div>
@@ -59,8 +59,8 @@ export default function RBVApart() {
                                     <FlaskConical size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Science‑driven innovation</h3>
-                                    <p className="text-sm md:text-base opacity-85 leading-relaxed">
+                                    <h3 className="text-xl 2xl:text-2xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Science‑driven innovation</h3>
+                                    <p className="text-sm md:text-base 2xl:text-xl opacity-85 leading-relaxed">
                                         Formulas created and validated with veterinary experts, combining evidence‑based actives with pet‑friendly flavours and textures.
                                     </p>
                                 </div>
@@ -72,8 +72,8 @@ export default function RBVApart() {
                                     <Globe size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Asia‑wide presence</h3>
-                                    <p className="text-sm md:text-base opacity-85 leading-relaxed">
+                                    <h3 className="text-xl font-bold 2xl:text-2xl mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Asia‑wide presence</h3>
+                                    <p className="text-sm md:text-base 2xl:text-xl opacity-85 leading-relaxed">
                                         A trusted partner to vets, retailers, and distributors across Asia, backed by strong Canadian heritage and regional market expertise.
                                     </p>
                                 </div>
@@ -85,8 +85,8 @@ export default function RBVApart() {
                                     <Award size={24} />
                                 </div>
                                 <div className="pt-1">
-                                    <h3 className="text-xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Proven trust</h3>
-                                    <p className="text-sm md:text-base opacity-85 leading-relaxed">
+                                    <h3 className="text-xl 2xl:text-2xl font-bold mb-1 peer-hover:text-[#9444A1] transition-colors hover:text-[#9444A1]">Proven trust</h3>
+                                    <p className="text-sm md:text-base 2xl:text-xl opacity-85 leading-relaxed">
                                         A proud member of R‑Biomeds Healthcare Group, one of Asia’s leading healthcare organizations, trusted by vets and retailers.
                                     </p>
                                 </div>
