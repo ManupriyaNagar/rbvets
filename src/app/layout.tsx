@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${saira.variable} antialiased bg-[#9444A1] text-[#e9daea] font-sans`}
+        className={`${saira.variable} antialiased text-[#e9daea] font-sans`}
       >
         <PawCursor />
         <main className="min-h-screen">

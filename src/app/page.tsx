@@ -6,6 +6,9 @@ import RBVApart from "@/components/RBVApart";
 import ProductSpotlight from "@/components/ProductSpotlight";
 import Highlights from "@/components/Highlights";
 import Feedback from "@/components/Feedback";
+import Banner from "@/components/Banner";
+import Petamour from "@/components/Petamour";
+import DealsSection from "@/components/DealsSection";
 
 export default function Home() {
   return (
@@ -20,6 +23,10 @@ export default function Home() {
         <ProductSpotlight />
       </div>
       <Highlights />
+      <Banner />
+      <Petamour />
+      <DealsSection />
+
       <Feedback />
     </div>
   );
