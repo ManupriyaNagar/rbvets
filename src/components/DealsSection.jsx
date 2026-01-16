@@ -9,8 +9,8 @@ const deals = [
     {
         id: 1,
         image: '/RBVWEbsite/1/Lifestyle.jpg',
-        hoverimg: "/RBVWEbsite/1/FOP.jpg",
-        title: "Fluromed Advanced Care for Pets, 100ml",
+        hoverimg: "/fop/1.png",
+        title: "No-Tick Spray",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
         link: "/product?service=Create+Breeding",
 
@@ -18,40 +18,40 @@ const deals = [
     {
         id: 2,
         image: '/RBVWEbsite/2/Lifestyle.jpg',
-        hoverimg: "/RBVWEbsite/2/FOP.jpg",
-        title: "Fluromed Duo Ultimate Protection Pack, X-Large",
+        hoverimg: "/fop/2.png",
+        title: "Entrovet Sachets",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
         link: "/product?service=Medical+Treatments",
     },
     {
         id: 3,
         image: '/RBVWEbsite/3/Lifestyle.jpg',
-        hoverimg: "/RBVWEbsite/3/FOP.jpg",
-        title: "Imoximed Flea & Tick Collar, M: 14 to 20-in neck",
+        hoverimg: "/fop/3.png",
+        title: "RehydraPet Sachets",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
         link: "/product?service=General+Grooming",
     },
     {
         id: 4,
         image: '/RBVWEbsite/4/Lifestyle.jpg', // Reusing image for 4th card
-        hoverimg: "/RBVWEbsite/4/FOP.jpg",
-        title: "Fluromed Toy Wand Cat Toy with Silvervine",
+        hoverimg: "/fop/4.png",
+        title: "Liver Med",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
         link: "/product?service=Diets+%26+Nutrition",
     },
     {
         id: 5,
         image: '/RBVWEbsite/5/Lifestyle.jpg', // Reusing
-        hoverimg: "/RBVWEbsite/5/FOP.jpg",
-        title: "Fluromed Pajamas Button Style, Medium",
+        hoverimg: "/fop/5.png",
+        title: "Bone & Joint Syrup",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
         link: "/product?service=Nails+Treatment",
     },
     {
         id: 6,
         image: '/RBVWEbsite/6/Lifestyle.jpg', // Reusing
-        hoverimg: "/RBVWEbsite/6/FOP.jpg",
-        title: "Fluromed Pajamas Button Style, Medium",
+        hoverimg: "/fop/6.png",
+        title: "Skin & Coat Syrup",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
         link: "/product?service=Ear+Cleaning",
     }
