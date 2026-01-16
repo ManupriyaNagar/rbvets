@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Petamour() {
     return (
-        <section className="w-full bg-white py-16  flex justify-center">
+        <section id="petamour" className="w-full bg-white py-16  flex justify-center">
             <div className="container mx-auto bg-gray-100 p-10 rounded-[2.5rem] w-full grid grid-cols-1 md:grid-cols-3 gap-12 text-[#0f172a]">
 
                 {/* Left Side - Image */}

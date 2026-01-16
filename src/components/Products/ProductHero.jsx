@@ -117,7 +117,7 @@ export default function ProductHero() {
           </div>
 
           {/* MIDDLE CONTENT */}
-          <div className="max-w-[550px] flex flex-col gap-6 h-[650px]">
+          <div className="max-w-[500px] flex flex-col gap-6 h-[650px]">
             {/* TOP IMAGE */}
             <div className="relative w-full h-[300px] flex-[1] rounded-2xl overflow-hidden">
               <Image
@@ -169,9 +169,9 @@ export default function ProductHero() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex-1 w-full flex flex-col gap-6 h-[650px]">
-            <div className="text-center mb-6">
-              <h1 className="text-5xl font-semibold text-gray-900 ">
+          <div className="flex-2 w-full flex flex-col gap-6 h-[650px]">
+            <div className="text-center ">
+              <h1 className="text-4xl font-semibold text-gray-900 ">
                 {active.title}
               </h1>
             </div>
@@ -180,7 +180,7 @@ export default function ProductHero() {
                 src={active.image1}
                 alt={active.title}
                 fill
-                className="object-cover opacity-100 hover:opacity-0"
+                className="object-cover rounded-2xl opacity-100 hover:opacity-0"
                 priority
               />
               <Image

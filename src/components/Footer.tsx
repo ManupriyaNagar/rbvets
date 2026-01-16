@@ -1,156 +1,212 @@
-import { Facebook, Linkedin, Instagram, Twitter, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+    Facebook,
+    Instagram,
+    MapPin,
+    Phone,
+    Mail,
+    ArrowRight,
+} from "lucide-react";
 
 export default function Footer() {
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
     return (
         <footer id="contact" className="relative bg-[#9444A1] pt-12 pb-8 overflow-hidden">
-            {/* Background Pulse/Heartbeat Effect Placeholder */}
+            {/* Background Wave */}
             <div className="absolute top-0 left-0 w-full h-64 opacity-20 pointer-events-none">
-                <svg viewBox="0 0 1000 100" className="w-full h-full stroke-white/20 fill-none" preserveAspectRatio="none">
-                    <path d="M0 50 L100 50 L120 20 L140 80 L160 50 L300 50 L320 10 L340 90 L360 50 L600 50 L620 30 L640 70 L660 50 L1000 50" strokeWidth="1" />
+                <svg viewBox="0 0 1000 100" className="w-full h-full stroke-white/20 fill-none">
+                    <path
+                        d="M0 50 L100 50 L120 20 L140 80 L160 50 L300 50 L320 10 L340 90 L360 50 L600 50 L620 30 L640 70 L660 50 L1000 50"
+                        strokeWidth="1"
+                    />
                 </svg>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                {/* Newsletter Section */}
-                <div className="max-w-6xl mx-auto mb-4">
-                    <div className="flex flex-col md:flex-row items-center  gap-8 text-center">
-                        <div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4">96% of pet owners consider pets part of their family and RBV exists to protect that family bond.</h2>
-                        </div>
-                    </div>
+                {/* Newsletter */}
+                <div className="max-w-6xl mx-auto mb-6 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                        96% of pet owners consider pets family — RBV exists to protect that bond.
+                    </h2>
 
-                    <div className="mt-8 relative max-w-2xl mx-auto">
+                    <div className="max-w-2xl mx-auto">
                         <div className="flex items-center bg-[#953490]/20 border border-white/50 rounded-full p-2 pl-6 backdrop-blur-sm">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 className="bg-transparent border-none flex-grow text-white focus:outline-none placeholder:text-white/40"
                             />
-                            <button className="bg-[#d7a463] text-white font-bold py-3 px-8 rounded-full flex items-center gap-2 hover:bg-[#c69352] transition-all whitespace-nowrap">
-                                Subscribe Now <ArrowRight className="w-4 h-4" />
+                            <button className="bg-[#d7a463] text-white font-bold py-3 px-8 rounded-full flex items-center gap-2 hover:bg-[#c69352] transition">
+                                Subscribe <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {/* Footer Main Content */}
-                <div className="bg-white text-black rounded-[40px] p-10 md:p-10 border border-white/5 shadow-2xl">
+                {/* Footer Card */}
+                <div className="bg-white text-black rounded-[40px] p-10 shadow-2xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                        {/* Column 1: Logo & Info */}
+
+                        {/* Logo */}
                         <div>
-                            <div className="flex items-center gap-2 ">
-                                <div className="relative h-32 w-62 overflow-hidden">
-                                    <Image
-                                        src="/logo.png"
-                                        alt="Logo"
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
+                            <div className="relative h-24 w-56 mb-4">
+                                <Image src="/logo.png" alt="RBV Logo" fill className="object-contain" />
                             </div>
-                            <p className=" mb-8 leading-relaxed">
-                                Rooted in Canadian innovation and global quality standards, RBV delivers premium veterinary healthcare, nutrition, and wellness products for dogs and cats.
+                            <p className="mb-6 text-md leading-relaxed">
+                                Rooted in Canadian innovation, RBV delivers premium veterinary
+                                healthcare and wellness products.
                             </p>
                             <div className="flex gap-4">
-                                <SocialIcon icon={<Facebook className="w-6 h-6" />} href="https://www.facebook.com/rbvetcare/about/" target="_blank" />
-                                <SocialIcon icon={<Instagram className="w-6 h-6" />} href="https://www.instagram.com/rbv_canada?igsh=MWI1MDB1eGp2d2Niag==" target="_blank" />
+                                <SocialIcon href="https://www.facebook.com/rbvetcare/about/">
+                                    <Facebook className="w-5 h-5" />
+                                </SocialIcon>
+                                <SocialIcon href="https://www.instagram.com/rbv_canada">
+                                    <Instagram className="w-5 h-5" />
+                                </SocialIcon>
                             </div>
                         </div>
 
-                        {/* Column 2: Page */}
+                        {/* Products */}
                         <div>
-                            <h4 className="text-xl font-bold mb-8">Page</h4>
-                            <ul className="space-y-4">
+                            <h4 className="text-xl font-bold mb-6">Products</h4>
+
+                            <FooterProductDropdown
+                                title="RBV"
+                                isOpen={openDropdown === "rbv"}
+                                onToggle={() =>
+                                    setOpenDropdown(openDropdown === "rbv" ? null : "rbv")
+                                }
+                                items={[
+                                    { label: "Flura Med", href: "/compare" },
+                                    { label: "FiproMed Duo", href: "/rewards" },
+                                    { label: "ImoxiMed", href: "/about" },
+                                ]}
+                            />
+
+                            <FooterProductDropdown
+                                title="PetAmour"
+                                isOpen={openDropdown === "petamour"}
+                                onToggle={() =>
+                                    setOpenDropdown(openDropdown === "petamour" ? null : "petamour")
+                                }
+                                items={[
+                                    { label: "No-Tick Spray", href: "/product?service=No-tick+Spray" },
+                                    { label: "Entrovet Sachets", href: "/product?service=Entrovet+Sachets" },
+                                    { label: "RehydraPet Sachets", href: "/product?service=RehydraPet+Sachets" },
+                                    { label: "Liver Med", href: "/product?service=Liver+Med" },
+                                ]}
+                            />
+                        </div>
+
+                        {/* Links */}
+                        <div>
+                            <h4 className="text-xl font-bold mb-6">Links</h4>
+                            <ul className="space-y-4 text-sm">
                                 <FooterLink href="/#about">About Us</FooterLink>
-                                {/* <FooterLink href="#services">Products</FooterLink> */}
-                                <FooterLink href="/compare">Flura Med
-                                    (Fluralaner Chewable Tablets)</FooterLink>
-                                <FooterLink href="/rewards">FiproMed Duo
-                                    (Spot-on Solution)</FooterLink>
-                                <FooterLink href="/about">ImoxiMed
-                                    (Spot-on Solution)</FooterLink>
-                            </ul>
-                        </div>
-
-                        {/* Column 3: Link */}
-                        <div>
-                            <h4 className="text-xl font-bold mb-8">Link</h4>
-                            <ul className="space-y-4">
-                                <FooterLink href="/#terms">Trems & Condition</FooterLink>
+                                <FooterLink href="/#terms">Terms & Conditions</FooterLink>
                                 <FooterLink href="/#privacy">Privacy Policy</FooterLink>
-                                <FooterLink href="/#contact">Contact Us</FooterLink>
-                                <FooterLink href="/#terms-of-use">Treams Of Use</FooterLink>
                             </ul>
                         </div>
 
-                        {/* Column 4: Contact */}
+                        {/* Contact */}
                         <div>
-                            <h4 className="text-xl font-bold mb-8">Contact</h4>
-                            <div className="space-y-6">
-                                <ContactItem
-                                    icon={<MapPin className="w-5 h-5" />}
-                                    label="Address"
-                                    value="
-Yangon, Myanmar
-Global Operational Presence
-
-"
-                                />
-                                <ContactItem
-                                    icon={<Phone className="w-5 h-5" />}
-                                    label="Phone Number"
-                                    value="+959979386000"
-                                />
-                                <ContactItem
-                                    icon={<Mail className="w-5 h-5" />}
-                                    label="Email"
-                                    value="info@abcinternational.com"
-                                />
-                            </div>
+                            <h4 className="text-xl font-bold mb-6">Contact</h4>
+                            <ContactItem icon={<MapPin />} label="Address" value="Yangon, Myanmar" />
+                            <ContactItem icon={<Phone />} label="Phone" value="+95 9979386000" />
+                            <ContactItem icon={<Mail />} label="Email" value="info@rbv.com" />
                         </div>
                     </div>
                 </div>
 
-                {/* Footer Bottom */}
-                <div className="mt-8 text-center  text-sm">
-                    <p>© {new Date().getFullYear()} RBV | All Rights Reserved</p>
-                </div>
+                <p className="text-center text-white text-sm mt-6">
+                    © {new Date().getFullYear()} RBV. All Rights Reserved.
+                </p>
             </div>
         </footer>
     );
 }
 
-function SocialIcon({ icon, href, target }: { icon: React.ReactNode, href: string, target?: string }) {
+/* ---------------- COMPONENTS ---------------- */
+
+function FooterProductDropdown({
+    title,
+    items,
+    isOpen,
+    onToggle,
+}: {
+    title: string;
+    items: { label: string; href: string }[];
+    isOpen: boolean;
+    onToggle: () => void;
+}) {
+    return (
+        <div className="mb-4">
+            <button
+                onClick={onToggle}
+                className="w-full flex justify-between items-center font-medium"
+            >
+                {title}
+                <span>{isOpen ? "−" : "+"}</span>
+            </button>
+
+            {isOpen && (
+                <ul className="mt-3 space-y-2 pl-2">
+                    {items.map((item, i) => (
+                        <li key={i}>
+                            <Link href={item.href} className="text-sm text-gray-600 hover:text-black">
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
+}
+
+function SocialIcon({ href, children }: { href: string; children: React.ReactNode }) {
     return (
         <Link
             href={href}
-            target={target}
-            rel={target === "_blank" ? "noopener noreferrer" : undefined}
-            className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gray-100 hover:text-black transition-all"
+            target="_blank"
+            className="h-10 w-10 flex items-center justify-center hover:bg-gray-100"
         >
-            {icon}
+            {children}
         </Link>
     );
 }
 
-function FooterLink({ href, children }: { href: string, children: React.ReactNode }) {
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
     return (
         <li>
-            <Link href={href} className=" hover:text-[#d7a463] transition-colors">{children}</Link>
+            <Link href={href} className="hover:text-[#d7a463]">
+                {children}
+            </Link>
         </li>
     );
 }
 
-function ContactItem({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) {
+function ContactItem({
+    icon,
+    label,
+    value,
+}: {
+    icon: React.ReactNode;
+    label: string;
+    value: string;
+}) {
     return (
-        <div className="flex items-start gap-4">
-            <div className="h-12 w-12 shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#953490]/10">
+        <div className="flex gap-4 mb-4">
+            <div className="h-10 w-10 flex items-center justify-center">
                 {icon}
             </div>
             <div>
-                <p className="text-xs mb-1">{label}</p>
+                <p className="text-xs">{label}</p>
                 <p className="text-sm font-medium">{value}</p>
             </div>
         </div>

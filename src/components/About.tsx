@@ -1,19 +1,12 @@
 import Image from "next/image";
-import { Play, Heart } from "lucide-react";
+
 
 export default function About() {
     return (
         <section className="relative w-full bg-white">
             <div className="flex flex-col lg:flex-row h-[90vh] relative">
                 {/* Left Column: Image */}
-                <div className="relative w-full lg:w-1/2 lg:min-h-0">
-                    <Image
-                        src="/about.png"
-                        alt="Veterinarian with dog"
-                        fill
-                        className="object-cover"
-                    />
-                </div>
+
 
                 {/* Right Column: Content & Brand Background */}
                 <div className="w-full lg:w-1/2 bg-[#9444A1] p-12 md:p-10 flex flex-col  text-white">
@@ -36,9 +29,17 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+                <div className="relative w-full lg:w-1/2 lg:min-h-0">
+                    <Image
+                        src="/about.png"
+                        alt="Veterinarian with dog"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
 
                 {/* Centered Overlapping Mission Badge */}
-                <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 w-full max-w-7xl px-4 flex justify-center">
+                {/* <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 w-full max-w-7xl px-4 flex justify-center">
                     <div className="bg-white p-6 md:p-10 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center gap-8 border border-[#9444A1]/10">
                         <div className="h-16 w-16 shrink-0 rounded-2xl bg-[#9444A1]/10 flex items-center justify-center">
                             <Heart className="w-10 h-10 text-[#9444A1]" />
@@ -53,7 +54,7 @@ export default function About() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             {/* Spacer for the overlapping badge */}
             <div className=""></div>

@@ -12,7 +12,7 @@ const deals = [
         hoverimg: "/fop/1.png",
         title: "No-Tick Spray",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Create+Breeding",
+        link: "/product?service=No-tick+Spray",
 
     },
     {
@@ -21,7 +21,7 @@ const deals = [
         hoverimg: "/fop/2.png",
         title: "Entrovet Sachets",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Medical+Treatments",
+        link: "/product?service=Entrovet+Sachets",
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const deals = [
         hoverimg: "/fop/3.png",
         title: "RehydraPet Sachets",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=General+Grooming",
+        link: "/product?service=RehydraPet+Sachets",
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const deals = [
         hoverimg: "/fop/4.png",
         title: "Liver Med",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Diets+%26+Nutrition",
+        link: "/product?service=Liver+Med",
     },
     {
         id: 5,
@@ -45,7 +45,7 @@ const deals = [
         hoverimg: "/fop/5.png",
         title: "Bone & Joint Syrup",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Nails+Treatment",
+        link: "/product?service=Bone+&+Joint+Syrup",
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ const deals = [
         hoverimg: "/fop/6.png",
         title: "Skin & Coat Syrup",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Ear+Cleaning",
+        link: "/product?service=Skin+&+Coat+Syrup",
     }
 ];
 
@@ -99,7 +99,7 @@ const DealsSection = () => {
 
     const scrollRight = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+            scrollRef.current.scrollBy({ left: 340, behavior: "smooth" });
         }
     };
 
@@ -117,7 +117,7 @@ const DealsSection = () => {
                 {/* Carousel Container */}
                 <div ref={scrollRef} className="flex overflow-x-auto gap-4 pb-4 md:pb-0 scroll-smooth no-scrollbar">
                     {deals.map((deal) => (
-                        <div key={deal.id} className="min-w-[220px] md:min-w-[280px] max-w-[360px]  flex-shrink-0 flex flex-col justify-between overflow-hidden relative transition-transform hover:-translate-y-1 duration-300">
+                        <div key={deal.id} className="min-w-[220px] md:min-w-[260px] max-w-[360px]  flex-shrink-0 flex flex-col justify-between overflow-hidden relative transition-transform hover:-translate-y-1 duration-300">
 
 
 

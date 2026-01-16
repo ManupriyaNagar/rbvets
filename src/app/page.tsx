@@ -9,6 +9,7 @@ import Feedback from "@/components/Feedback";
 import Banner from "@/components/Banner";
 import Petamour from "@/components/Petamour";
 import DealsSection from "@/components/DealsSection";
+import Mission from "@/components/Mission";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <div id="about" className="scroll-mt-20">
         <About />
       </div>
+      <Mission />
       <RBVApart />
       <div id="products" className="scroll-mt-20">
         <ProductSpotlight />
