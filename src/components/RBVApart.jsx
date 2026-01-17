@@ -8,7 +8,7 @@ export default function RBVApart() {
                 {/* Left Column: Image */}
                 <div className="relative w-full lg:w-1/2 lg:min-h-0">
                     <Image
-                        src="/rbvets.png"
+                        src="/apart.png"
                         alt="Veterinarian with dog"
                         fill
                         className="object-cover"
@@ -97,7 +97,7 @@ export default function RBVApart() {
 
                 {/* Centered Overlapping Mission Badge */}
                 <div className="absolute bottom-24 right-1/2 translate-x-2 z-30 w-[42rem] px-2 flex justify-center">
-                    <div className="bg-white p-6 md:p-8 rounded-l-3xl shadow-2xl flex flex-col md:flex-row items-center border border-[#9444A1]/10">
+                    <div className="bg-white p-6 md:p-8 rounded-l-3xl  flex flex-col md:flex-row items-center border border-[#9444A1]/10">
                         <div>
                             <p className="text-lg md:text-2xl font-bold text-gray-900 leading-tight mb-2 hover:text-[#9444A1]">
                                 74% of pet owners are willing to invest more in foods with added health benefits, so our formulas combine taste with targeted wellness support.

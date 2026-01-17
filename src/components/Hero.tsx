@@ -6,13 +6,26 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
     {
-        src: "/hero/11.png",
+        src: "/banner/11.png",
         alt: "Modern Medical Facility",
         title: "Advanced Healthcare Solutions",
         description: "Dedicated to your health and well-being with state-of-the-art technology.",
     },
+
     {
-        src: "/hero/22.png",
+        src: "/banner/3.png",
+        alt: "Professional Healthcare",
+        title: "Expert Medical Care",
+        description: "Our team of specialists is here to provide personalized care for your needs.",
+    },
+    {
+        src: "/banner/4.png",
+        alt: "Professional Healthcare",
+        title: "Expert Medical Care",
+        description: "Our team of specialists is here to provide personalized care for your needs.",
+    },
+    {
+        src: "/banner/5.png",
         alt: "Professional Healthcare",
         title: "Expert Medical Care",
         description: "Our team of specialists is here to provide personalized care for your needs.",
@@ -32,7 +45,7 @@ export default function Hero() {
     };
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 10000);
+        const interval = setInterval(nextSlide, 3000);
         return () => clearInterval(interval);
     }, [nextSlide]);
 

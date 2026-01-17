@@ -6,23 +6,37 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
     {
-        src: "/hero/11.png",
+        src: "/banner/1.png",
         alt: "Modern Medical Facility",
         title: "Advanced Healthcare Solutions",
         description: "Dedicated to your health and well-being with state-of-the-art technology.",
     },
     {
-        src: "/hero/22.png",
+        src: "/banner/2.png",
         alt: "Professional Healthcare",
         title: "Expert Medical Care",
         description: "Our team of specialists is here to provide personalized care for your needs.",
     },
     {
-        src: "/hero/33.png",
+        src: "/banner/3.png",
         alt: "Modern Medical Facility",
         title: "Advanced Healthcare Solutions",
         description: "Dedicated to your health and well-being with state-of-the-art technology.",
     },
+    {
+        src: "/banner/4.png",
+        alt: "Modern Medical Facility",
+        title: "Advanced Healthcare Solutions",
+        description: "Dedicated to your health and well-being with state-of-the-art technology.",
+    },
+    {
+        src: "/banner/5.png",
+        alt: "Modern Medical Facility",
+        title: "Advanced Healthcare Solutions",
+        description: "Dedicated to your health and well-being with state-of-the-art technology.",
+    },
+
+
 
 ];
 
