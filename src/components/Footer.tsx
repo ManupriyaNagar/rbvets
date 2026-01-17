@@ -99,6 +99,8 @@ export default function Footer() {
                                     { label: "Entrovet Sachets", href: "/product?service=Entrovet+Sachets" },
                                     { label: "RehydraPet Sachets", href: "/product?service=RehydraPet+Sachets" },
                                     { label: "Liver Med", href: "/product?service=Liver+Med" },
+                                    { label: "Bone & Joint Syrup", href: "/product?service=Bone+%26+Joint+Syrup" },
+                                    { label: "Skin & Coat Syrup", href: "/product?service=Skin+%26+Coat+Syrup" },
                                 ]}
                             />
                         </div>

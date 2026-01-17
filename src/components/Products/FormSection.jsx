@@ -18,7 +18,7 @@ export default function FormSection() {
                                 <input
                                     type="text"
                                     placeholder="Your full name"
-                                    className="text-gray-300 w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#9444A1] focus:ring-1 focus:ring-[#9444A1] outline-none transition-all"
+                                    className="text-black placeholder:text-gray-500 w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#9444A1] focus:ring-1 focus:ring-[#9444A1] outline-none transition-all"
                                 />
                             </div>
                             <div>
@@ -26,7 +26,7 @@ export default function FormSection() {
                                 <input
                                     type="email"
                                     placeholder="you@example.com"
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#9444A1] focus:ring-1 focus:ring-[#9444A1] outline-none transition-all"
+                                    className="text-black placeholder:text-gray-500 w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#9444A1] focus:ring-1 focus:ring-[#9444A1] outline-none transition-all"
                                 />
                             </div>
                             <div>
@@ -34,7 +34,7 @@ export default function FormSection() {
                                 <textarea
                                     rows={4}
                                     placeholder="How can we help you?"
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#9444A1] focus:ring-1 focus:ring-[#9444A1] outline-none transition-all resize-none"
+                                    className="text-black placeholder:text-gray-500 w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#9444A1] focus:ring-1 focus:ring-[#9444A1] outline-none transition-all resize-none"
                                 />
                             </div>
                             <button className="w-full bg-white text-[#9444A1] font-extrabold py-3 rounded-lg text-lg transition-colors flex items-center justify-center gap-2">

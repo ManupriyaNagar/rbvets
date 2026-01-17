@@ -28,7 +28,6 @@ export default function Home() {
       <Banner />
       <Petamour />
       <DealsSection />
-
       <Feedback />
     </div>
   );

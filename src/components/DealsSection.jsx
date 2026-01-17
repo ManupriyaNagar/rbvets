@@ -45,7 +45,7 @@ const deals = [
         hoverimg: "/fop/5.png",
         title: "Bone & Joint Syrup",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Bone+&+Joint+Syrup",
+        link: "/product?service=Bone+%26+Joint+Syrup",
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ const deals = [
         hoverimg: "/fop/6.png",
         title: "Skin & Coat Syrup",
         paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit",
-        link: "/product?service=Skin+&+Coat+Syrup",
+        link: "/product?service=Skin+%26+Coat+Syrup",
     }
 ];
 
