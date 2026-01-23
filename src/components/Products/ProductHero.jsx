@@ -69,6 +69,7 @@ const services = [
 
 export default function ProductHero() {
   const [active, setActive] = useState(services[0]);
+  const [imgToggle, setImgToggle] = useState(false);
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -93,13 +94,33 @@ export default function ProductHero() {
         <div className="flex flex-col lg:flex-row gap-6 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="max-w-[300px]">
+          <div className="md:max-w-[300px] w-full">
             <h2 className="text-3xl font-semibold text-gray-900 relative inline-block">
               Our Products
               <span className="absolute left-0 -bottom-2 w-12 h-[3px] bg-[#9444A1] rounded-full"></span>
             </h2>
+             <div className="md:hidden sm:block mt-6 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
+              {services.map((service) => (
+                <button
+                  key={service.title}
+                  onClick={() => {
+                    setActive(service);
+                    setImgToggle(false);
+                  }}
+                  className={`whitespace-nowrap px-6 py-3 rounded-full border transition-all text-sm md:text-lg
+                    ${
+                      active.title === service.title
+                        ? "bg-[#9444A1] text-white border-[#9444A1]"
+                        : "bg-white text-gray-600 border-gray-300"
+                    }`}
+                >
+                  {service.title}
+                </button>
+              ))}
+            </div>
 
-            <div className="mt-10 space-y-6 w-fit">
+         <div className="hidden sm:block mt-10 space-y-6 w-fit">
+
               {services.map((service) => (
                 <button
                   key={service.title}
@@ -117,20 +138,25 @@ export default function ProductHero() {
           </div>
 
           {/* MIDDLE CONTENT */}
-          <div className="max-w-[500px] flex flex-col gap-6 h-[650px]">
+          <div className="md:max-w-[500px] w-full flex flex-col gap-6 h-[650px]">
             {/* TOP IMAGE */}
-            <div className="relative w-full h-[300px] flex-[1] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-[300px] flex-[1] rounded-2xl overflow-hidden"
+             onClick={() => setImgToggle(!imgToggle)}>
               <Image
                 src={active.image}
                 alt={active.title}
                 fill
-                className="object-contain opacity-100 hover:opacity-0"
+                   className={`object-contain transition-opacity duration-300
+                  ${imgToggle ? "opacity-0" : "opacity-100"}
+                  md:opacity-100 md:hover:opacity-0`}
               />
               <Image
                 src={active.hoverimg}
                 alt={active.title}
                 fill
-                className="object-contain opacity-0 hover:opacity-100"
+                   className={`object-contain transition-opacity duration-300
+                  ${imgToggle ? "opacity-100" : "opacity-0"}
+                  md:opacity-0 md:hover:opacity-100`}
               />
             </div>
 
@@ -169,29 +195,45 @@ export default function ProductHero() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex-2 w-full flex flex-col gap-6 h-[650px]">
-            <div className="text-center ">
-              <h1 className="text-4xl font-semibold text-gray-900 ">
-                {active.title}
-              </h1>
-            </div>
-            <div className="relative w-full flex-1 rounded-2xl overflow-hidden">
-              <Image
-                src={active.image1}
-                alt={active.title}
-                fill
-                className="object-cover rounded-2xl opacity-100 hover:opacity-0"
-                priority
-              />
-              <Image
-                src={active.hoverimg1 || active.image1}
-                alt={active.title}
-                fill
-                className="object-cover opacity-0 hover:opacity-100"
-                priority
-              />
-            </div>
-          </div>
+        <div className="w-full flex flex-col gap-6 md:p-0 p-4">
+  <div className="text-center">
+    <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
+      {active.title}
+    </h1>
+  </div>
+
+  <div
+    className="relative w-full h-[550px] md:h-[620px]  rounded-2xl overflow-hidden cursor-pointer"
+    onClick={() => setImgToggle(!imgToggle)}
+  >
+    {/* BASE IMAGE */}
+    <Image
+      src={active.image1}
+      alt={active.title}
+      fill
+      className={`object-cover transition-opacity duration-300
+        ${imgToggle ? "opacity-0" : "opacity-100"}
+        md:opacity-100 md:hover:opacity-0`}
+      priority
+    />
+
+    {/* HOVER / TAP IMAGE */}
+    <Image
+      src={active.hoverimg1 || active.image1}
+      alt={active.title}
+      fill
+      className={`object-cover transition-opacity duration-300
+        ${imgToggle ? "opacity-100" : "opacity-0"}
+        md:opacity-0 md:hover:opacity-100`}
+      priority
+    />
+  </div>
+
+  <p className="text-xs text-gray-400 md:hidden text-center">
+    Tap image to view more
+  </p>
+</div>
+
         </div>
       </div>
     </section>
