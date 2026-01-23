@@ -65,25 +65,25 @@ const DealsSection = ({
                     className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar pb-4"
                 >
                     {deals.map((deal) => (
-                        <div
-                            key={deal.id}
-                            onClick={() =>
-                                setActiveId(activeId === deal.id ? null : deal.id)
-                            }
-                            className="
-                                min-w-[260px] sm:min-w-[290px]
-                                md:max-w-[450px]
-                                flex-shrink-0
-                                flex flex-col
-                                bg-white
-                                rounded-2xl
-                                overflow-hidden
-                                transition-transform
-                                md:hover:-translate-y-1
-                                cursor-pointer
-                            "
-                        >
-                            {/* IMAGE */}
+                      <div
+    key={deal.id}
+    onClick={() =>
+        setActiveId(activeId === deal.id ? null : deal.id)
+    }
+    className="
+        group
+        min-w-[260px] sm:min-w-[290px]
+        md:max-w-[450px]
+        flex-shrink-0
+        flex flex-col
+        bg-white
+        rounded-2xl
+        overflow-hidden
+        transition-transform
+        md:hover:-translate-y-1
+        cursor-pointer
+    "
+>
                             <div className="relative w-full h-[500px] sm:h-[460px] md:h-[65vh] p-3">
                                 <div className="relative w-full h-full rounded-xl overflow-hidden">
 
@@ -96,18 +96,23 @@ const DealsSection = ({
                                     />
 
                                     {/* HOVER / TAP IMAGE */}
-                                    <Image
-                                        src={deal.hoverimg}
-                                        alt={deal.title}
-                                        fill
-                                        className={`
-                                            object-cover rounded-xl
-                                            transition-opacity duration-300
-                                            ${activeId === deal.id ? "opacity-100" : "opacity-0"}
-                                            hidden md:block
-                                            md:hover:opacity-100
-                                        `}
-                                    />
+                                  {/* HOVER / TAP IMAGE */}
+<Image
+    src={deal.hoverimg}
+    alt={deal.title}
+    fill
+    className={`
+        object-cover rounded-xl
+        transition-opacity duration-300
+
+        /* Mobile tap */
+        ${activeId === deal.id ? "opacity-100" : "opacity-0"}
+
+        /* Desktop hover */
+        md:opacity-0 md:group-hover:opacity-100
+    `}
+/>
+
                                 </div>
                             </div>
 
