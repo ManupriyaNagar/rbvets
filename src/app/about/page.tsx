@@ -5,30 +5,53 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-white ">
             {/* Hero Section */}
-            <section className="py-8 bg-gray-50 overflow-hidden">
-                <div className="container mx-auto ">
-                    <div className="flex flex-col items-center text-center  mx-auto">
-                        <div className="relative w-full mb-12 flex justify-center items-center gap-4">
-                            <div className="shadow-sm relative w-full  h-64 md:h-[300px] 2xl:h-[350px] z-10">
-                                <Image
-                                    src="/bgimoxi.png"
-                                    alt="RBV Main Product"
-                                    fill
-                                    className="w-full "
-                                />
-                            </div>
-                        </div>
+          <section className="py-6 md:py-8 bg-gray-50 overflow-hidden">
+    <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center text-center mx-auto">
 
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                            ImoxiMed <span className="text-3xl font-medium">(Spot-on Solutions)</span>
-                        </h1>
-                        <p className="text-xl text-gray-600  leading-relaxed">
-                            This product is indicated for the prevention and treatment of <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">in vivo</span> and <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">in vitro parasitic</span> infections in cats.
-                        </p>
-                        <p className="text-xl text-gray-600 leading-relaxed">For the treatment and prevention of fleas, ear mites, and gastrointestinal worms Prevents heartworm disease.</p>
-                    </div>
+            {/* IMAGE */}
+            <div className="relative w-full mb-8 md:mb-12 flex justify-center items-center">
+                <div className="shadow-sm relative w-full h-[180px] sm:h-[220px] md:h-[300px] 2xl:h-[350px] z-10">
+                    <Image
+                        src="/bgimoxi.png"
+                        alt="RBV Main Product"
+                        fill
+                        priority
+                        className="object-contain md:object-cover"
+                    />
                 </div>
-            </section>
+            </div>
+
+            {/* TITLE */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
+                ImoxiMed{" "}
+                <span className="block sm:inline text-lg sm:text-2xl font-medium">
+                    (Spot-on Solutions)
+                </span>
+            </h1>
+
+            {/* DESCRIPTION */}
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mb-3">
+                This product is indicated for the prevention and treatment of{" "}
+                <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">
+                    in vivo
+                </span>{" "}
+                and{" "}
+                <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">
+                    in vitro parasitic
+                </span>{" "}
+                infections in cats.
+            </p>
+
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl">
+                For the treatment and prevention of fleas, ear mites, and gastrointestinal worms.
+                Prevents heartworm disease.
+            </p>
+
+        </div>
+    </div>
+</section>
+
 
             {/* Feature Grid */}
             <section className="py-8">

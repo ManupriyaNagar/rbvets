@@ -65,6 +65,8 @@ const feedbacks = [
     }
 ];
 
+
+
 const Feedback = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const cardWidth = 400;
@@ -144,7 +146,7 @@ const Feedback = () => {
                     ))}
                 </div>
                 <div className='flex justify-center mt-12 -mb-20'>
-                    <img src="/feedback-img.png" alt="" className='w-70% h-80' />
+                    <img src="/feedback-img.png" alt="" className='md:w-70% md:h-80' />
                 </div>
             </div>
         </div>
