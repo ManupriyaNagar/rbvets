@@ -84,8 +84,8 @@ export default function FormSection() {
                             </button>
                         </form>
                     </div>
-                    <div className='w-2/5 bg-black'>
-                        <img src="/1.jpg" alt="hdushfh" />
+                    <div className='w-2/5'>
+                        <img src="/distributorship.png" alt="hdushfh" className='rounded-2xl' />
                     </div>
 
 

@@ -46,25 +46,3 @@ button,
   scrollbar-width: none;
   /* Firefox */
 }
-
-@keyframes imageSwap {
-  0% {
-    transform: translateY(0%);
-  }
-
-  45% {
-    transform: translateY(0%);
-  }
-
-  55% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.animate-image-swap {
-  animation: imageSwap 4s ease-in-out infinite;
-}

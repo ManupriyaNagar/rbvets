@@ -20,22 +20,17 @@ export default function ChoSection() {
                             </h2>
 
                             <p className="text-lg mb-4 sm:text-xl font-medium text-[#9444A1] border-l-4 border-[#9444A1] pl-4 py-1 bg-white/50 rounded-r-md">
-                                “Well-bred, well-mannered, and waggily welcoming”
+                                “A wagging welcome to RBVetcare.”
                             </p>
                         </header>
 
                         <div className="space-y-6 text-base sm:text-lg leading-relaxed text-slate-600">
                             <p>
-                                Duke is a distinguished dog with an unshakeable sense of calm and just enough
-                                Labrador mischief to keep things interesting. As Chief Happiness Officer, he
-                                takes great pride in welcoming the team each morning, tail wagging,
-                                posture perfect, ready to set the tone for the day ahead.
+                                Hi, I’m Duke your Chief Happiness Officer. At RBVetcare, everything we do is inspired by pets and their wellbeing. As a pet-driven company, we proudly create global-standard veterinary medicines and care products trusted by professionals and pet lovers worldwide.
+
                             </p>
                             <p>
-                                He’s been raised in an office environment, and it certainly shows. Reggie
-                                knows when to be sociable, when to be serious, and how to keep the younger
-                                dogs in check with effortless grace. While they bring the bounce, Reggie brings
-                                the balance — with a surprise zoomy now and then 🐕✨
+                                Take a look around and discover how we’re helping pets live healthier, happier lives.
                             </p>
                         </div>
 
@@ -52,38 +47,26 @@ export default function ChoSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="relative w-full lg:w-2/5 aspect-square sm:aspect-[4/5] lg:h-[600px] overflow-hidden rounded-2xl group">
+                    <div className="relative w-full lg:w-2/5 aspect-square sm:aspect-[4/5] lg:h-full overflow-hidden rounded-2xl group">
 
-                        {/* Sliding container */}
-                        <div className="absolute inset-0 animate-image-swap">
+                        {/* FIRST IMAGE */}
+                        <Image
+                            src="/cho.png"
+                            alt="Reggie"
+                            fill
+                            priority
+                            className="object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+                        />
 
-                            {/* FIRST IMAGE */}
-                            <div className="relative w-full h-full bg-gradient-to-br from-purple-200 to-blue-200 rounded-2xl rotate-0">
-                                <Image
-                                    src="/cho.png"
-                                    alt="Reggie"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
+                        {/* SECOND IMAGE */}
+                        <Image
+                            src="/duke.png"
+                            alt="Duke"
+                            fill
+                            className="object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                        />
 
-                            {/* SECOND IMAGE */}
-                            <div className="relative w-full h-full bg-gradient-to-br from-purple-200 to-blue-200 rounded-2xl rotate-0">
-                                <Image
-                                    src="/duke.png"
-                                    alt="Duke"
-                                    fill
-                                    className="object-cover bg-[#9444A1]"
-                                />
-                            </div>
-
-                        </div>
-
-                        {/* Funky shadow */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-blue-200 rounded-2xl rotate-500 scale-105 -z-10" />
                     </div>
-
                 </div>
             </div>
         </section>
