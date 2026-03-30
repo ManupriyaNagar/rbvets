@@ -113,41 +113,41 @@ export default function Banner() {
 
                 {/* Sign In Card */}
                 <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                        🔄
+                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
+                        <img src="/rbv/1.png" alt="" />
                     </div>
                     <div>
-                        <p className="font-semibold">Save 35% on first order</p>
+                        <p className="font-semibold text-[#9444A1]">Cruelty Free</p>
                     </div>
                 </div>
 
                 {/* Autoship */}
                 <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                        🔄
+                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
+                        <img src="/rbv/2.png" alt="" />
                     </div>
                     <div>
-                        <p className="font-semibold">Save 35% on first order</p>
+                        <p className="font-semibold text-[#9444A1]">Pet Friendly Products</p>
                     </div>
                 </div>
 
                 {/* Pharmacy */}
                 <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                        🔄
+                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
+                        <img src="/rbv/3.png" alt="" />
                     </div>
                     <div>
-                        <p className="font-semibold">Save 35% on first order</p>
+                        <p className="font-semibold text-[#9444A1]">No Harmful Additives</p>
                     </div>
                 </div>
 
                 {/* Pharmacy */}
                 <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                        🔄
+                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
+                        <img src="/rbv/4.png" alt="" />
                     </div>
                     <div>
-                        <p className="font-semibold">Save 35% on first order</p>
+                        <p className="font-semibold text-[#9444A1]">Responsibly made for pets</p>
                     </div>
                 </div>
             </div>

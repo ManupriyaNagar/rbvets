@@ -10,12 +10,14 @@ import Banner from "@/components/Banner";
 import Petamour from "@/components/Petamour";
 import DealsSection from "@/components/DealsSection";
 import Mission from "@/components/Mission";
+import ChoSection from "@/components/ChoSection";
 
 export default function Home() {
   return (
     <div>
       <Hero />
       <Features />
+      <ChoSection />
       <div id="about" className="scroll-mt-20">
         <About />
       </div>
@@ -32,3 +34,11 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+// mb from the well bred
+// our mission font of para
+// footer rbvetcare -> rbv
+// contact page new 

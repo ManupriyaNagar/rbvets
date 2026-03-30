@@ -99,7 +99,7 @@ export default function ProductHero() {
               Our Products
               <span className="absolute left-0 -bottom-2 w-12 h-[3px] bg-[#9444A1] rounded-full"></span>
             </h2>
-             <div className="md:hidden sm:block mt-6 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
+            <div className="md:hidden sm:block mt-6 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
               {services.map((service) => (
                 <button
                   key={service.title}
@@ -108,10 +108,9 @@ export default function ProductHero() {
                     setImgToggle(false);
                   }}
                   className={`whitespace-nowrap px-6 py-3 rounded-full border transition-all text-sm md:text-lg
-                    ${
-                      active.title === service.title
-                        ? "bg-[#9444A1] text-white border-[#9444A1]"
-                        : "bg-white text-gray-600 border-gray-300"
+                    ${active.title === service.title
+                      ? "bg-[#9444A1] text-white border-[#9444A1]"
+                      : "bg-white text-gray-600 border-gray-300"
                     }`}
                 >
                   {service.title}
@@ -119,7 +118,7 @@ export default function ProductHero() {
               ))}
             </div>
 
-         <div className="hidden sm:block mt-10 space-y-6 w-fit">
+            <div className="hidden sm:block mt-10 space-y-6 w-fit">
 
               {services.map((service) => (
                 <button
@@ -141,12 +140,12 @@ export default function ProductHero() {
           <div className="md:max-w-[500px] w-full flex flex-col gap-6 h-[650px]">
             {/* TOP IMAGE */}
             <div className="relative w-full h-[300px] flex-[1] rounded-2xl overflow-hidden"
-             onClick={() => setImgToggle(!imgToggle)}>
+              onClick={() => setImgToggle(!imgToggle)}>
               <Image
                 src={active.image}
                 alt={active.title}
                 fill
-                   className={`object-contain transition-opacity duration-300
+                className={`object-contain transition-opacity duration-300
                   ${imgToggle ? "opacity-0" : "opacity-100"}
                   md:opacity-100 md:hover:opacity-0`}
               />
@@ -154,7 +153,7 @@ export default function ProductHero() {
                 src={active.hoverimg}
                 alt={active.title}
                 fill
-                   className={`object-contain transition-opacity duration-300
+                className={`object-contain transition-opacity duration-300
                   ${imgToggle ? "opacity-100" : "opacity-0"}
                   md:opacity-0 md:hover:opacity-100`}
               />
@@ -195,44 +194,44 @@ export default function ProductHero() {
           </div>
 
           {/* RIGHT IMAGE */}
-        <div className="w-full flex flex-col gap-6 md:p-0 p-4">
-  <div className="text-center">
-    <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
-      {active.title}
-    </h1>
-  </div>
+          <div className="w-full flex flex-col gap-6 md:p-0 p-4">
+            <div className="text-center">
+              <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
+                {active.title}
+              </h1>
+            </div>
 
-  <div
-    className="relative w-full h-[550px] md:h-[620px]  rounded-2xl overflow-hidden cursor-pointer"
-    onClick={() => setImgToggle(!imgToggle)}
-  >
-    {/* BASE IMAGE */}
-    <Image
-      src={active.image1}
-      alt={active.title}
-      fill
-      className={`object-cover transition-opacity duration-300
+            <div
+              className="relative w-full h-[550px] md:h-[620px]  rounded-2xl overflow-hidden cursor-pointer"
+              onClick={() => setImgToggle(!imgToggle)}
+            >
+              {/* BASE IMAGE */}
+              <Image
+                src={active.image1}
+                alt={active.title}
+                fill
+                className={`object-cover transition-opacity duration-300
         ${imgToggle ? "opacity-0" : "opacity-100"}
         md:opacity-100 md:hover:opacity-0`}
-      priority
-    />
+                priority
+              />
 
-    {/* HOVER / TAP IMAGE */}
-    <Image
-      src={active.hoverimg1 || active.image1}
-      alt={active.title}
-      fill
-      className={`object-cover transition-opacity duration-300
+              {/* HOVER / TAP IMAGE */}
+              <Image
+                src={active.hoverimg1 || active.image1}
+                alt={active.title}
+                fill
+                className={`object-cover transition-opacity duration-300
         ${imgToggle ? "opacity-100" : "opacity-0"}
         md:opacity-0 md:hover:opacity-100`}
-      priority
-    />
-  </div>
+                priority
+              />
+            </div>
 
-  <p className="text-xs text-gray-400 md:hidden text-center">
-    Tap image to view more
-  </p>
-</div>
+            <p className="text-xs text-gray-400 md:hidden text-center">
+              Tap image to view more
+            </p>
+          </div>
 
         </div>
       </div>

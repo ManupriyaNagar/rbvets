@@ -33,7 +33,7 @@ export default function Hero() {
         <section
             className="
                 relative w-full overflow-hidden bg-gray-100
-                h-[60vh] sm:h-[65vh] md:h-[78vh]
+                h-[60vh] sm:h-[65vh] md:h-[74vh]
             "
             onTouchStart={() => setPaused(true)}
             onTouchEnd={() => setPaused(false)}
@@ -42,16 +42,15 @@ export default function Hero() {
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                        index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                    }`}
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                        }`}
                 >
                     <Image
                         src={image.src}
                         alt={image.alt}
                         fill
                         priority={index === 0}
-                        className="object-cover"
+                        className="object-contain"
                     />
                 </div>
             ))}
@@ -95,11 +94,10 @@ export default function Hero() {
                     <button
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${
-                            index === currentIndex
-                                ? "bg-white scale-125"
-                                : "bg-white/50"
-                        }`}
+                        className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${index === currentIndex
+                            ? "bg-white scale-125"
+                            : "bg-white/50"
+                            }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}

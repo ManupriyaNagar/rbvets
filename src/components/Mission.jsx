@@ -16,8 +16,8 @@ export default function Mission() {
                         max-w-5xl
                     ">
                         {/* Icon */}
-                        <div className="h-14 w-14 md:h-16 md:w-16 shrink-0 rounded-2xl bg-[#9444A1]/10 flex items-center justify-center">
-                            <Heart className="w-8 h-8 md:w-10 md:h-10 text-[#9444A1]" />
+                        <div className="h-14 w-14 md:h-66 md:w-66 shrink-0 rounded-2xl  flex items-center justify-center">
+                            <img src="/cho1.png" alt="" className="" />
                         </div>
 
                         {/* Content */}
@@ -30,7 +30,7 @@ export default function Mission() {
                                 To make world-class pet medicines, nutrition, and lifestyle solutions accessible and affordable to every pet parent.
                             </p>
 
-                            <p className="text-sm sm:text-base md:text-md opacity-85 leading-relaxed text-black">
+                            <p className="text-base sm:text-lg md:text-2xl text-gray-900 leading-snug mb-3">
                                 RBV is committed to closing the gap between cutting-edge research and real-world pet care, because pets deserve better every day.
                             </p>
                         </div>

@@ -8,7 +8,7 @@ export default function ProductPage() {
             <Suspense fallback={<div>Loading...</div>}>
                 <ProductHero />
             </Suspense>
-            <FormSection />
+            {/* <FormSection /> */}
         </div>
     );
 }

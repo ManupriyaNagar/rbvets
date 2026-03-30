@@ -2,68 +2,63 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const feedbacks = [
-    {
-        id: 1,
-        name: "Sopheaktra Nou",
-        image: "/f.png",
-        text: "FiproMed Duo is convenient and effective. The spot-on application is simple, and it helps maintain consistent flea and tick control without stressing my pets."
-    },
-    {
-        id: 2,
-        name: "Rithy Chea",
-        image: "/f.png",
-        text: "FluraMed offers long-lasting protection with just one dose. It has made parasite prevention easier and more reliable for my dog throughout the month."
-    },
-    {
-        id: 3,
-        name: "Dr. Sovannara Heng",
-        image: "/f.png",
-        text: "RB Vetcare products are well-formulated and trustworthy. They deliver consistent results, making them suitable for routine parasite prevention in clinical practice."
-    },
-    {
-        id: 4,
-        name: "Dara Keo",
-        image: "/f.png",
-        text: "ImoxiMed is ideal for cats that dislike oral medicines. It is easy to apply and provides reliable protection against common parasites."
-    },
-    {
-        id: 5,
-        name: "Pisey Chhun",
-        image: "/f.png",
-        text: "Using FluraMed has reduced the stress of frequent parasite treatments. One dose lasts weeks and keeps my dog comfortable and protected."
-    },
-    {
-        id: 6,
-        name: "Borey Sok",
-        image: "/f.png",
-        text: "FiproMed Duo has been dependable for monthly parasite control. Even after bathing, it continues to protect my pets from fleas and ticks."
-    },
-    {
-        id: 7,
-        name: "Malis Touch",
-        image: "/f.png",
-        text: "ImoxiMed worked effectively for my cat. The spot-on application was simple, and scratching reduced noticeably within a few days of use."
-    },
-    {
-        id: 8,
-        name: "Vannak Lim",
-        image: "/f.png",
-        text: "My dog usually avoids treatments, but FluraMed was easy to give. I noticed fewer ticks quickly, and the protection lasts much longer."
-    },
-    {
-        id: 9,
-        name: "Dr. Sreyneang Phan",
-        image: "/f.png",
-        text: "I regularly recommend FiproMed Duo because it is easy to apply, reliable, and provides consistent flea and tick protection for dogs and cats."
-    },
-    {
-        id: 10,
-        name: "Sokha Chan",
-        image: "/f.png",
-        text: "FluraMed has simplified parasite control for my dog. One chew provides long-lasting protection, saves time, and gives me complete peace of mind every month."
-    }
-];
+const feedbacks =
+    [
+        {
+            "id": 11,
+            "name": "Dr. Khin Maung Win",
+            "image": "/f.png",
+            "text": "My Labrador usually refuses medicine, so giving tablets is always a challenge. With FluraMed it was different he took it easily, almost like a treat. Within a few days I noticed fewer ticks, and it’s convenient knowing the protection lasts much longer than monthly options."
+        },
+        {
+            "id": 12,
+            "name": "Dr. Meera Kulkarni",
+            "image": "/f.png",
+            "text": "In clinical practice we look for solutions that pet owners can use easily at home. FiproMed Duo is practical because the spot-on format is quick to apply and helps maintain consistent flea and tick protection for dogs and cats."
+        },
+        {
+            "id": 13,
+            "name": "Nguyen Thi Lan",
+            "image": "/f.png",
+            "text": "My cat is very sensitive to medicines, so I was worried about giving treatments. ImoxiMed was simple to apply and caused no stress for my pet. After a few days, the scratching reduced and my cat seemed much more comfortable."
+        },
+        {
+            "id": 14,
+            "name": "Maung Sein Win",
+            "image": "/f.png",
+            "text": "I use No-Tick Spray before taking my dog outside, especially in grassy areas. The spray is quick to apply and helps keep ticks away during walks. It’s become a simple part of our routine."
+        },
+        {
+            "id": 15,
+            "name": "Dr. Anjali Verma",
+            "image": "/f.png",
+            "text": "Entrovet Sachets are convenient for pet owners because they are simple to administer and helpful for supporting digestive health during mild stomach disturbances."
+        },
+        {
+            "id": 16,
+            "name": "Pham Duc Huy",
+            "image": "/f.png",
+            "text": "When my dog had diarrhea, hydration was my biggest concern. RehydraPet Sachets were easy to mix in water and helped keep him hydrated during recovery."
+        },
+        {
+            "id": 17,
+            "name": "Kyaw Win",
+            "image": "/f.png",
+            "text": "My older dog had started moving a bit slowly, especially during walks. After using Bone & Joint Syrup regularly, he seems more comfortable and active again."
+        },
+        {
+            "id": 18,
+            "name": "Aung Kyaw Moe",
+            "image": "/f.png",
+            "text": "After a few weeks of using Skin & Coat Syrup, my dog’s coat looks healthier and shinier. It also seems to help with dryness."
+        },
+        {
+            "id": 19,
+            "name": "Dr. Rakesh Gupta",
+            "image": "/f.png",
+            "text": "Liver Med is a practical option for supporting liver function in pets that require additional care. Pet owners find it convenient to use, and it fits well into routine veterinary treatment plans."
+        }
+    ];
 
 
 

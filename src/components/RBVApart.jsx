@@ -39,10 +39,9 @@ export default function RBVApart() {
 
                         <div className="relative space-y-6">
 
-                            {/* Timeline line – hide on mobile */}
-                            <div className="hidden md:block absolute left-[27px] top-6 bottom-6 w-0.5 bg-[#9444A1]/30" />
+                            {/* Timeline line */}
+                            <div className="hidden md:block absolute left-[24px] top-0 h-[90%] w-0.5 bg-[#9444A1]/30" />
 
-                            {/* ITEM */}
                             {[
                                 {
                                     icon: <ShieldCheck size={22} />,
@@ -61,8 +60,8 @@ export default function RBVApart() {
                                 },
                                 {
                                     icon: <Globe size={22} />,
-                                    title: "Asia-wide presence",
-                                    text: "A trusted partner to vets, retailers, and distributors across Asia, backed by strong Canadian heritage and regional market expertise.",
+                                    title: "Distributor Across the Globe",
+                                    text: "A trusted partner to vets, retailers, and distributors worldwide, backed by strong Canadian heritage and industry expertise.",
                                 },
                                 {
                                     icon: <Award size={22} />,
@@ -70,17 +69,22 @@ export default function RBVApart() {
                                     text: "A proud member of R-Biomeds Healthcare Group, one of Asia’s leading healthcare organizations.",
                                 },
                             ].map((item, i) => (
-                                <div key={i} className="flex gap-4 items-start">
-                                    <div className="
-                                        w-12 h-12 shrink-0
-                                        rounded-full
-                                        border border-[#9444A1]/20
-                                        text-[#9444A1]
-                                        flex items-center justify-center
-                                        bg-white shadow
-                                    ">
-                                        {item.icon}
+                                <div key={i} className="flex gap-4 items-start relative">
+
+                                    {/* Connector dot alignment fix */}
+                                    <div className="relative z-10">
+                                        <div className="
+                    w-12 h-12 shrink-0
+                    rounded-full
+                    border border-[#9444A1]/20
+                    text-[#9444A1]
+                    flex items-center justify-center
+                    bg-white shadow
+                ">
+                                            {item.icon}
+                                        </div>
                                     </div>
+
                                     <div>
                                         <h3 className="font-bold text-base sm:text-lg md:text-xl mb-1 hover:text-[#9444A1]">
                                             {item.title}

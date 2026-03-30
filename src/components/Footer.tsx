@@ -16,7 +16,7 @@ export default function Footer() {
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
     return (
-        <footer id="contact" className="relative bg-[#9444A1] pt-12 pb-8 overflow-hidden">
+        <footer className="relative bg-[#9444A1] pt-12 pb-8 overflow-hidden">
             {/* Background Wave */}
             <div className="absolute top-0 left-0 w-full h-64 opacity-20 pointer-events-none">
                 <svg viewBox="0 0 1000 100" className="w-full h-full stroke-white/20 fill-none">
@@ -31,7 +31,7 @@ export default function Footer() {
                 {/* Newsletter */}
                 <div className="max-w-6xl mx-auto mb-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                        96% of pet owners consider pets family — RBV exists to protect that bond.
+                        96% of pet owners consider pets family <br /> RBV exists to protect that bond.
                     </h2>
 
                     <div className="max-w-2xl mx-auto">
@@ -61,13 +61,33 @@ export default function Footer() {
                                 Rooted in Canadian innovation, RBV delivers premium veterinary
                                 healthcare and wellness products.
                             </p>
-                            <div className="flex gap-4">
-                                <SocialIcon href="https://www.facebook.com/rbvetcare/about/">
-                                    <Facebook className="w-5 h-5" />
-                                </SocialIcon>
-                                <SocialIcon href="https://www.instagram.com/rbv_canada">
-                                    <Instagram className="w-5 h-5" />
-                                </SocialIcon>
+                            <div className="flex gap-6">
+                                <div className="space-y-3 text-center">
+                                    <span className="text-[10px] text-center font-bold text-[#9444A1] uppercase tracking-widest">RBV</span>
+                                    <div className="flex gap-3">
+                                        <SocialIcon href="https://www.facebook.com/rbvetcare/about/">
+                                            <Facebook className="w-5 h-5 text-[#9444A1]" />
+                                        </SocialIcon>
+                                        <SocialIcon href="https://www.instagram.com/rbv_canada">
+                                            <Instagram className="w-5 h-5 text-[#9444A1]" />
+                                        </SocialIcon>
+                                    </div>
+                                </div>
+
+                                {/* Vertical Divider */}
+                                <div className="w-[2px] bg-[#9444A1]"></div>
+
+                                <div className="space-y-3 text-center">
+                                    <span className="text-[10px] font-bold text-[#9444A1] uppercase text-center tracking-widest">PetAmour</span>
+                                    <div className="flex gap-3">
+                                        <SocialIcon href="https://www.facebook.com/petamourcare/">
+                                            <Facebook className="w-5 h-5 text-[#9444A1]" />
+                                        </SocialIcon>
+                                        <SocialIcon href="https://www.instagram.com/petamour_canada">
+                                            <Instagram className="w-5 h-5 text-[#9444A1]" />
+                                        </SocialIcon>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -119,8 +139,8 @@ export default function Footer() {
                         <div>
                             <h4 className="text-xl font-bold mb-6">Contact</h4>
                             <ContactItem icon={<MapPin />} label="Address" value="Yangon, Myanmar" />
-                            <ContactItem icon={<Phone />} label="Phone" value="+95 9979386000" />
-                            <ContactItem icon={<Mail />} label="Email" value="info@rbv.com" />
+                            <ContactItem icon={<Phone />} label="Phone" value="+855 12 266 221" />
+                            <ContactItem icon={<Mail />} label="Email" value="vet@rbiomeds.com" />
                         </div>
                     </div>
                 </div>
@@ -176,7 +196,7 @@ function SocialIcon({ href, children }: { href: string; children: React.ReactNod
         <Link
             href={href}
             target="_blank"
-            className="h-10 w-10 flex items-center justify-center hover:bg-gray-100"
+            className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-100 bg-gray-50 text-gray-600 hover:bg-[#9444A1] hover:text-white hover:border-[#9444A1] transition-all duration-300"
         >
             {children}
         </Link>

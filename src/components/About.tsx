@@ -38,7 +38,7 @@ export default function About() {
 
                         {/* HEADING */}
                         <div className="relative inline-block mb-6">
-                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
+                            <h2 className="text-2xl sm:text-3xl md:text-[2.7rem] font-bold">
                                 About R-Biomeds Vetcare
                             </h2>
                             <div className="absolute -bottom-2 left-0 w-full h-1.5 bg-white/30 rounded-full"></div>

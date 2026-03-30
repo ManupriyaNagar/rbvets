@@ -23,7 +23,7 @@ export default function Petamour() {
                 {/* IMAGE */}
                 <div className="col-span-1 md:col-span-2 relative w-full h-[220px] sm:h-[300px] md:h-[500px]">
                     <Image
-                        src="/about-main.png"
+                        src="/petamour-banner.png"
                         alt="Pet owner with dog"
                         fill
                         className="object-cover rounded-[2.5rem]"
@@ -41,15 +41,13 @@ export default function Petamour() {
                     text-left md:text-left
                 ">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#953490] leading-tight">
-                        CarePlus pet insurance <br />
-                        has your pet’s back. <br />
-                        And yours.
+                        Your Pet. <br /> Our Passion. <br /> One Loving Brand.
                     </h2>
 
                     <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg">
-                        We get it—we’re pet parents, too. Whether you have a tiny pup or kitten or a full-grown adult,
-                        you want the best protection for your pet and your budget. That’s why we designed plans that
-                        cover everything you both need.
+
+
+                        At Pet Amour, we believe pets are family. That’s why we’re dedicated to creating thoughtfully formulated pet wellness solutions that enhance every wag, purr, and cuddle. With roots in veterinary science and love in every product, we combine nature, nutrition, and care to promote a healthier, happier life for pets of all kinds.
                     </p>
 
                     <button className="
@@ -63,7 +61,7 @@ export default function Petamour() {
                         transition-colors
                         text-base sm:text-lg
                     ">
-                        Get a quote
+                        Distributorship Across the Globe
                     </button>
                 </div>
 
