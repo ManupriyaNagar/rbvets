@@ -6,35 +6,41 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
     {
-        src: "/pet/1.png",
+        src: "/hero2/1.png",
         alt: "Modern Medical Facility",
         title: "Advanced Healthcare Solutions",
         description: "Dedicated to your health and well-being with state-of-the-art technology.",
     },
     {
-        src: "/pet/2.png",
+        src: "/hero2/2.png",
         alt: "Professional Healthcare",
         title: "Expert Medical Care",
         description: "Our team of specialists is here to provide personalized care for your needs.",
     },
-    // {
-    //     src: "/banner/3.png",
-    //     alt: "Modern Medical Facility",
-    //     title: "Advanced Healthcare Solutions",
-    //     description: "Dedicated to your health and well-being with state-of-the-art technology.",
-    // },
-    // {
-    //     src: "/banner/4.png",
-    //     alt: "Modern Medical Facility",
-    //     title: "Advanced Healthcare Solutions",
-    //     description: "Dedicated to your health and well-being with state-of-the-art technology.",
-    // },
-    // {
-    //     src: "/banner/5.png",
-    //     alt: "Modern Medical Facility",
-    //     title: "Advanced Healthcare Solutions",
-    //     description: "Dedicated to your health and well-being with state-of-the-art technology.",
-    // },
+    {
+        src: "/hero2/3.png",
+        alt: "Modern Medical Facility",
+        title: "Advanced Healthcare Solutions",
+        description: "Dedicated to your health and well-being with state-of-the-art technology.",
+    },
+    {
+        src: "/hero2/4.png",
+        alt: "Modern Medical Facility",
+        title: "Advanced Healthcare Solutions",
+        description: "Dedicated to your health and well-being with state-of-the-art technology.",
+    },
+    {
+        src: "/hero2/5.png",
+        alt: "Modern Medical Facility",
+        title: "Advanced Healthcare Solutions",
+        description: "Dedicated to your health and well-being with state-of-the-art technology.",
+    },
+    {
+        src: "/hero2/6.png",
+        alt: "Modern Medical Facility",
+        title: "Advanced Healthcare Solutions",
+        description: "Dedicated to your health and well-being with state-of-the-art technology.",
+    }
 
 
 
