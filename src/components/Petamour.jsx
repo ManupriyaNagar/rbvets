@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Petamour() {
     return (
@@ -50,19 +51,23 @@ export default function Petamour() {
                         At Pet Amour, we believe pets are family. That’s why we’re dedicated to creating thoughtfully formulated pet wellness solutions that enhance every wag, purr, and cuddle. With roots in veterinary science and love in every product, we combine nature, nutrition, and care to promote a healthier, happier life for pets of all kinds.
                     </p>
 
-                    <button className="
+                    <Link href="/contact" className="
                         bg-[#953490]
-                        hover:bg-[#953490]
+                        hover:bg-[#a1409c]
                         text-white
                         font-semibold
                         py-2.5 sm:py-3
                         px-6 sm:px-8
                         rounded-full
-                        transition-colors
+                        transition-all
                         text-base sm:text-lg
+                        inline-block
+                        shadow-md
+                        hover:shadow-lg
+                        active:scale-95
                     ">
                         Distributorship Across the Globe
-                    </button>
+                    </Link>
                 </div>
 
             </div>

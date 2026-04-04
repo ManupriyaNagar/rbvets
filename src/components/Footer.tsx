@@ -66,10 +66,10 @@ export default function Footer() {
                                     <span className="text-[10px] text-center font-bold text-[#9444A1] uppercase tracking-widest">RBV</span>
                                     <div className="flex gap-3">
                                         <SocialIcon href="https://www.facebook.com/rbvetcare/about/">
-                                            <Facebook className="w-5 h-5 text-[#9444A1]" />
+                                            <Facebook className="w-5 h-5" />
                                         </SocialIcon>
                                         <SocialIcon href="https://www.instagram.com/rbv_canada">
-                                            <Instagram className="w-5 h-5 text-[#9444A1]" />
+                                            <Instagram className="w-5 h-5" />
                                         </SocialIcon>
                                     </div>
                                 </div>
@@ -81,10 +81,10 @@ export default function Footer() {
                                     <span className="text-[10px] font-bold text-[#9444A1] uppercase text-center tracking-widest">PetAmour</span>
                                     <div className="flex gap-3">
                                         <SocialIcon href="https://www.facebook.com/people/PetAmour/61578009273870/?ref=1">
-                                            <Facebook className="w-5 h-5 text-[#9444A1]" />
+                                            <Facebook className="w-5 h-5" />
                                         </SocialIcon>
                                         <SocialIcon href="https://www.instagram.com/petamour_rbv/">
-                                            <Instagram className="w-5 h-5 text-[#9444A1]" />
+                                            <Instagram className="w-5 h-5" />
                                         </SocialIcon>
                                     </div>
                                 </div>
@@ -145,9 +145,14 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <p className="text-center text-white text-sm mt-6">
-                    © {new Date().getFullYear()} RBV. All Rights Reserved.
-                </p>
+                <div className="text-center mt-6 space-y-2">
+                    <p className="text-white text-sm">
+                        © {new Date().getFullYear()} RBV. All Rights Reserved.
+                    </p>
+                    <p className="text-white text-xs tracking-wider uppercase font-medium">
+                        Powered by <Link href="https://rbshstudio.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-4">RBSH STUDIO</Link>
+                    </p>
+                </div>
             </div>
         </footer>
     );
@@ -196,7 +201,7 @@ function SocialIcon({ href, children }: { href: string; children: React.ReactNod
         <Link
             href={href}
             target="_blank"
-            className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-100 bg-gray-50 text-gray-600 hover:bg-[#9444A1] hover:text-white hover:border-[#9444A1] transition-all duration-300"
+            className="group h-10 w-10 flex items-center justify-center rounded-full border border-gray-100 bg-gray-50 text-[#9444A1] hover:bg-[#9444A1] hover:text-white hover:border-[#9444A1] transition-all duration-300"
         >
             {children}
         </Link>
