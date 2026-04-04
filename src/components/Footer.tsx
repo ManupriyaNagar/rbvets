@@ -80,10 +80,10 @@ export default function Footer() {
                                 <div className="space-y-3 text-center">
                                     <span className="text-[10px] font-bold text-[#9444A1] uppercase text-center tracking-widest">PetAmour</span>
                                     <div className="flex gap-3">
-                                        <SocialIcon href="https://www.facebook.com/petamourcare/">
+                                        <SocialIcon href="https://www.facebook.com/people/PetAmour/61578009273870/?ref=1">
                                             <Facebook className="w-5 h-5 text-[#9444A1]" />
                                         </SocialIcon>
-                                        <SocialIcon href="https://www.instagram.com/petamour_canada">
+                                        <SocialIcon href="https://www.instagram.com/petamour_rbv/">
                                             <Instagram className="w-5 h-5 text-[#9444A1]" />
                                         </SocialIcon>
                                     </div>

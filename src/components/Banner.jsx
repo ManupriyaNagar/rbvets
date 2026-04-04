@@ -57,53 +57,56 @@ export default function Banner() {
     return (
         <section className="w-full px-4 py-6 bg-white">
             {/* HERO BANNER */}
-            <div className="container mx-auto relative h-[45vh] w-full overflow-hidden bg-gray-100">
-                {/* Slides */}
-                {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                            }`}
-                    >
-                        <Image
-                            src={image.src}
-                            alt={image.alt}
-                            fill
-                            priority={index === 0}
-                            className=""
-                        />
+            <div className="container mx-auto relative group">
+                {/* Image Container with overflow hidden */}
+                <div className="relative h-[45vh] w-full overflow-hidden bg-gray-100 rounded-[2rem] shadow-sm">
+                    {/* Slides */}
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                                }`}
+                        >
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                fill
+                                priority={index === 0}
+                                className="object-cover"
+                            />
 
+                        </div>
+                    ))}
+
+                    {/* Indicators */}
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                        {images.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentIndex(index)}
+                                className={`w-10 h-1.5 rounded-full transition-all ${index === currentIndex ? "bg-white scale-110 shadow-md" : "bg-white/40 hover:bg-white/60"
+                                    }`}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
-                ))}
+                </div>
 
-                {/* Navigation Buttons */}
+                {/* Navigation Buttons - Positioned outside the image container */}
                 <button
                     onClick={prevSlide}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-sm transition-all md:left-8"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-30 p-3 rounded-full bg-white shadow-lg text-[#9444A1] hover:bg-[#9444A1] hover:text-white transition-all duration-300 transform md:hover:scale-110 active:scale-95"
                     aria-label="Previous slide"
                 >
-                    <ChevronLeft size={32} />
+                    <ChevronLeft size={28} />
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-sm transition-all md:right-8"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-30 p-3 rounded-full bg-white shadow-lg text-[#9444A1] hover:bg-[#9444A1] hover:text-white transition-all duration-300 transform md:hover:scale-110 active:scale-95"
                     aria-label="Next slide"
                 >
-                    <ChevronRight size={32} />
+                    <ChevronRight size={28} />
                 </button>
-
-                {/* Indicators */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-                    {images.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentIndex(index)}
-                            className={`w-10 h-2 rounded-full transition-all ${index === currentIndex ? "bg-white scale-100" : "bg-white/50"
-                                }`}
-                            aria-label={`Go to slide ${index + 1}`}
-                        />
-                    ))}
-                </div>
             </div>
 
             {/* BOTTOM PROMO STRIP */}
