@@ -34,7 +34,7 @@ export default function ProductSpotlight() {
                         {/* Product Image Area */}
                         <div className="h-64 md:h-full 2xl:w-full  bg-gray-100 flex items-center justify-center relative overflow-hidden ">
 
-                            <img src="/p.png" alt="" className="md:object-cover w-full h-full transition-transform duration-500 " />
+                            <img src="/dogeshbhai.jpg" alt="" className="md:object-cover w-full h-full transition-transform duration-500 " />
                         </div>
 
                         {/* Product Info Area */}

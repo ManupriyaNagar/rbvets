@@ -5,10 +5,12 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-    { src: "/banner/11.png", alt: "Modern Medical Facility" },
-    { src: "/banner/3.png", alt: "Professional Healthcare" },
-    { src: "/banner/4.png", alt: "Professional Healthcare" },
-    { src: "/banner/5.png", alt: "Professional Healthcare" },
+    { src: "/firstbanner/1.png", alt: "Modern Medical Facility" },
+    { src: "/firstbanner/2.png", alt: "Professional Healthcare" },
+    { src: "/firstbanner/3.png", alt: "Professional Healthcare" },
+    { src: "/firstbanner/4.png", alt: "Professional Healthcare" },
+    { src: "/firstbanner/5.png", alt: "Professional Healthcare" },
+    { src: "/firstbanner/6.png", alt: "Professional Healthcare" },
 ];
 
 export default function Hero() {
