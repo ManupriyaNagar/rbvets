@@ -35,7 +35,7 @@ export default function Hero() {
         <section
             className="
                 relative w-full overflow-hidden bg-gray-100
-                h-[60vh] sm:h-[65vh] md:h-[74vh]
+                h-[20vh] sm:h-[65vh] md:h-[74vh]
             "
             onTouchStart={() => setPaused(true)}
             onTouchEnd={() => setPaused(false)}
@@ -61,7 +61,7 @@ export default function Hero() {
             <button
                 onClick={prevSlide}
                 className="
-                    absolute left-3 sm:left-4 md:left-8
+                   hidden md:block absolute left-0 sm:left-20 md:left-8
                     top-1/2 -translate-y-1/2 z-20
                     p-1.5 sm:p-2
                     rounded-full
@@ -77,7 +77,7 @@ export default function Hero() {
             <button
                 onClick={nextSlide}
                 className="
-                    absolute right-3 sm:right-4 md:right-8
+                   hidden md:block absolute right-3 sm:right-4 md:right-8
                     top-1/2 -translate-y-1/2 z-20
                     p-1.5 sm:p-2
                     rounded-full

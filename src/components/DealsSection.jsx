@@ -62,17 +62,17 @@ const DealsSection = ({
                 {/* CAROUSEL */}
                 <div
                     ref={scrollRef}
-                    className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar pb-4"
+                    className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar pb-6 snap-x snap-mandatory"
                 >
                     {deals.map((deal) => (
-                      <div
-    key={deal.id}
-    onClick={() =>
-        setActiveId(activeId === deal.id ? null : deal.id)
-    }
-    className="
+                        <div
+                            key={deal.id}
+                            onClick={() =>
+                                setActiveId(activeId === deal.id ? null : deal.id)
+                            }
+                            className="
         group
-        min-w-[260px] sm:min-w-[290px]
+        min-w-[210px] sm:min-w-[300px]
         md:max-w-[450px]
         flex-shrink-0
         flex flex-col
@@ -82,9 +82,10 @@ const DealsSection = ({
         transition-transform
         md:hover:-translate-y-1
         cursor-pointer
+        snap-center
     "
->
-                            <div className="relative w-full h-[500px] sm:h-[460px] md:h-[65vh] p-3">
+                        >
+                            <div className="relative w-full h-[400px] sm:h-[400px] md:h-[65vh] p-2 md:p-3">
                                 <div className="relative w-full h-full rounded-xl overflow-hidden">
 
                                     {/* BASE IMAGE */}
@@ -92,16 +93,16 @@ const DealsSection = ({
                                         src={deal.image}
                                         alt={deal.title}
                                         fill
-                                        className="object-cover rounded-xl"
+                                        className="md:object-cover rounded-xl"
                                     />
 
                                     {/* HOVER / TAP IMAGE */}
-                                  {/* HOVER / TAP IMAGE */}
-<Image
-    src={deal.hoverimg}
-    alt={deal.title}
-    fill
-    className={`
+                                    {/* HOVER / TAP IMAGE */}
+                                    <Image
+                                        src={deal.hoverimg}
+                                        alt={deal.title}
+                                        fill
+                                        className={`
         object-cover rounded-xl
         transition-opacity duration-300
 
@@ -111,76 +112,76 @@ const DealsSection = ({
         /* Desktop hover */
         md:opacity-0 md:group-hover:opacity-100
     `}
-/>
+                                    />
 
                                 </div>
                             </div>
 
                             {/* CONTENT */}
-                            <div className="p-4 flex flex-col gap-2">
-                                <h3 className="text-gray-900 font-bold text-base sm:text-lg">
+                            <div className="p-3 md:p-4 flex flex-col gap-1 md:gap-2">
+                                <h3 className="text-gray-900 font-bold text-sm sm:text-lg">
                                     {deal.title}
                                 </h3>
 
-                                <p className="text-[#0f172a] text-sm sm:text-base line-clamp-2">
+                                <p className="text-[#0f172a] text-xs sm:text-base line-clamp-2">
                                     {deal.paragraph}
                                 </p>
 
                                 <Link
                                     href={deal.link}
                                     className="
-                                        mt-2
+                                        mt-1 md:mt-2
                                         w-fit
-                                        flex items-center gap-2
+                                        flex items-center gap-1 md:gap-2
                                         bg-[#9444A1]
                                         text-white
-                                        px-5 py-2.5
+                                        px-4 py-2 md:px-5 md:py-2.5
                                         rounded-full
                                         font-semibold
-                                        text-sm sm:text-base
+                                        text-xs sm:text-base
                                     "
                                     onClick={(e) => e.stopPropagation()}
                                 >
                                     Explore
-                                    <ArrowRight size={18} />
+                                    <ArrowRight size={16} />
                                 </Link>
 
                                 {/* MOBILE TAP HINT */}
-                                <span className="md:hidden text-xs text-gray-400 mt-1">
+                                {/* <span className="md:hidden text-xs text-gray-400 mt-1">
                                     Tap image to view product
-                                </span>
+                                </span> */}
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {/* DESKTOP SCROLL BUTTONS */}
+                {/* SCROLL BUTTONS */}
                 {showLeftButton && (
                     <button
                         onClick={scrollLeft}
                         className="
-                            hidden md:flex
-                            absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2
+                            flex
+                            absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2
                             z-20
                             bg-[#953490]
-                            text-white p-2 rounded-full shadow-lg
+                            text-white p-1.5 md:p-2 rounded-full shadow-lg
                         "
                     >
-                        <ChevronLeft size={24} />
+                        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                     </button>
                 )}
 
                 <button
                     onClick={scrollRight}
                     className="
-                        hidden md:flex
-                        absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2
+                        flex
+                        absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-1/2
                         z-20
                         bg-[#953490]
-                        text-white p-2 rounded-full shadow-lg
+                        text-white p-1.5 md:p-2 rounded-full shadow-lg
                     "
                 >
-                    <ChevronRight size={24} />
+                    <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
             </div>
         </section>

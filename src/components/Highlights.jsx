@@ -114,9 +114,9 @@ export default function Highlights() {
                                 </div>
 
                                 {/* MOBILE HINT */}
-                                <p className="mt-2 text-xs text-gray-400 text-center md:hidden">
+                                {/* <p className="mt-2 text-xs text-gray-400 text-center md:hidden">
                                     Tap image to view product
-                                </p>
+                                </p> */}
                             </div>
                         </div>
                     ))}

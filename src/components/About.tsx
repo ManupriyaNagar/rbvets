@@ -13,14 +13,14 @@ export default function About() {
                 {/* IMAGE (TOP on mobile, RIGHT on desktop) */}
                 <div className="
                     relative w-full lg:w-1/2
-                    h-[260px] sm:h-[320px] lg:h-auto
-                    rounded-3xl
+                    h-[360px] sm:h-[320px] lg:h-auto
+                    md:rounded-3xl
                 ">
                     <Image
                         src="/about.png"
                         alt="Veterinarian with dog"
                         fill
-                        className="object-cover rounded-3xl lg:rounded-l"
+                        className="object-cover md:rounded-3xl lg:rounded-l"
                         priority
                     />
                 </div>
@@ -32,7 +32,7 @@ export default function About() {
                     px-6 py-8 sm:px-8 sm:py-10 lg:p-12
                     flex flex-col justify-center
                     text-white
-                    rounded-3xl lg:rounded-r
+                    rounded-t-3xl md:rounded-3xl lg:rounded-r
                 ">
                     <div className="max-w-2xl">
 

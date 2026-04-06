@@ -64,8 +64,24 @@ const feedbacks =
 
 const Feedback = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const cardWidth = 400;
+    const [cardWidth, setCardWidth] = useState(400);
     const gap = 24;
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 640) {
+                setCardWidth(280);
+            } else if (window.innerWidth < 768) {
+                setCardWidth(320);
+            } else {
+                setCardWidth(400);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -79,11 +95,11 @@ const Feedback = () => {
             <div className='container mx-auto px-4'>
                 <div className='mb-16 text-center relative'>
 
-                    <h1 className='text-5xl font-bold text-[#953490] mt-6'>Feedbacks</h1>
+                    <h1 className='text-3xl md:text-5xl font-bold text-[#953490] mt-6'>Feedbacks</h1>
                     <div className="absolute left-1/2 -translate-x-1/2 w-12 h-1 bg-[#d7a463]"></div>
                 </div>
 
-                <div className='relative flex justify-center items-center h-[500px]'>
+                <div className='relative flex justify-center items-center h-[600px] md:h-[500px]'>
                     <motion.div
                         className="flex gap-6 absolute left-1/2"
                         initial={false}
@@ -101,7 +117,7 @@ const Feedback = () => {
                             <div
                                 key={item.id}
                                 onClick={() => setActiveIndex(index)}
-                                className={`w-[320px] md:w-[400px] shrink-0 p-10 rounded-xl flex flex-col items-center text-center transition-colors duration-500 shadow-lg cursor-pointer ${activeIndex === index
+                                className={`w-[280px] sm:w-[320px] md:w-[400px] shrink-0 p-6 md:p-10 rounded-xl flex flex-col items-center text-center transition-colors duration-500 shadow-lg cursor-pointer ${activeIndex === index
                                     ? 'bg-white shadow-2xl'
                                     : 'bg-[#953490]/10 text-[#953490]/70'
                                     }`}
@@ -116,10 +132,10 @@ const Feedback = () => {
                                     alt={item.name}
                                     className='w-20 h-20 rounded-full border-4 border-white shadow-md mb-6 object-cover'
                                 />
-                                <p className={`text-lg leading-relaxed mb-10 min-h-[120px] ${activeIndex === index ? 'text-[#4A1952]' : 'text-[#953490]/60'}`}>
+                                <p className={`text-base md:text-lg leading-relaxed mb-10 min-h-[160px] md:min-h-[120px] ${activeIndex === index ? 'text-[#4A1952]' : 'text-[#953490]/60'}`}>
                                     "{item.text}"
                                 </p>
-                                <div className="text-[#d7a463] font-semibold flex items-center gap-2">
+                                <div className="text-[#d7a463] font-semibold flex items-center gap-2 mt-auto">
                                     <span className="w-6 h-[2px] bg-[#d7a463]"></span>
                                     {item.name}
                                 </div>
@@ -141,7 +157,7 @@ const Feedback = () => {
                     ))}
                 </div>
                 <div className='flex justify-center mt-12 -mb-20'>
-                    <img src="/feedback-img.png" alt="" className='md:w-70% md:h-80' />
+                    <img src="/feedback-img.png" alt="" className='w-full md:w-[70%] max-w-[800px] h-auto md:h-80 object-contain' />
                 </div>
             </div>
         </div>

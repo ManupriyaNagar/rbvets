@@ -85,12 +85,10 @@ export default function ProductHero() {
   }, [searchParams]);
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 px-4">
       <div className="container mx-auto ">
 
         {/* TOP HEADING */}
-
-
         <div className="flex flex-col lg:flex-row gap-6 items-center">
 
           {/* LEFT CONTENT */}
@@ -99,7 +97,8 @@ export default function ProductHero() {
               Our Products
               <span className="absolute left-0 -bottom-2 w-12 h-[3px] bg-[#9444A1] rounded-full"></span>
             </h2>
-            <div className="md:hidden sm:block mt-6 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
+            {/* MOBILE TABS */}
+            <div className="md:hidden mt-6 flex gap-3 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
               {services.map((service) => (
                 <button
                   key={service.title}
@@ -107,9 +106,9 @@ export default function ProductHero() {
                     setActive(service);
                     setImgToggle(false);
                   }}
-                  className={`whitespace-nowrap px-6 py-3 rounded-full border transition-all text-sm md:text-lg
+                  className={`whitespace-nowrap px-6 py-2.5 rounded-full border transition-all text-sm font-medium
                     ${active.title === service.title
-                      ? "bg-[#9444A1] text-white border-[#9444A1]"
+                      ? "bg-[#9444A1] text-white border-[#9444A1] shadow-sm"
                       : "bg-white text-gray-600 border-gray-300"
                     }`}
                 >
@@ -137,9 +136,16 @@ export default function ProductHero() {
           </div>
 
           {/* MIDDLE CONTENT */}
-          <div className="md:max-w-[500px] w-full flex flex-col gap-6 h-[650px]">
+          <div className="md:max-w-[500px] w-full flex flex-col gap-6 md:h-[650px] h-auto">
+            {/* PRODUCT TITLE (MOBILE ONLY) */}
+            <div className="md:hidden text-center">
+              <h1 className="text-3xl font-bold text-gray-900">
+                {active.title}
+              </h1>
+            </div>
+
             {/* TOP IMAGE */}
-            <div className="relative w-full h-[300px] flex-[1] rounded-2xl overflow-hidden"
+            <div className="relative w-full h-[300px] flex-[1] rounded-2xl overflow-hidden shadow-sm"
               onClick={() => setImgToggle(!imgToggle)}>
               <Image
                 src={active.image}
@@ -160,7 +166,7 @@ export default function ProductHero() {
             </div>
 
             {/* BOTTOM TEXT */}
-            <div className="relative w-full flex-col rounded-2xl bg-[#9444A1]/5 p-6 flex gap-2">
+            <div className="relative w-full flex-col rounded-2xl bg-[#9444A1]/5 p-6 flex gap-3 shadow-sm">
               {[active.description, active.description1, active.description2].map(
                 (text, index) => {
                   if (!text) return null;
@@ -171,18 +177,18 @@ export default function ProductHero() {
                     text.substring(0, colonIndex);
 
                   return (
-                    <p key={index} className="text-gray-800">
+                    <p key={index} className="text-gray-800 leading-relaxed">
                       {isUpperCaseLabel ? (
                         <>
-                          <span className="text-lg font-bold text-black">
+                          <span className="text-base font-bold text-black block mb-0.5">
                             {text.substring(0, colonIndex + 1)}
                           </span>
-                          <span className="text-base font-medium text-gray-700">
+                          <span className="text-sm font-medium text-gray-700">
                             {text.substring(colonIndex + 1)}
                           </span>
                         </>
                       ) : (
-                        <span className="text-base font-medium text-gray-700">
+                        <span className="text-sm font-medium text-gray-700">
                           {text}
                         </span>
                       )}
@@ -195,14 +201,14 @@ export default function ProductHero() {
 
           {/* RIGHT IMAGE */}
           <div className="w-full flex flex-col gap-6 md:p-0 p-4">
-            <div className="text-center">
+            <div className="hidden md:block text-center">
               <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
                 {active.title}
               </h1>
             </div>
 
             <div
-              className="relative w-full h-[550px] md:h-[620px]  rounded-2xl overflow-hidden cursor-pointer"
+              className="relative w-full h-[420px] md:h-[620px] rounded-2xl overflow-hidden cursor-pointer shadow-md"
               onClick={() => setImgToggle(!imgToggle)}
             >
               {/* BASE IMAGE */}
@@ -210,7 +216,7 @@ export default function ProductHero() {
                 src={active.image1}
                 alt={active.title}
                 fill
-                className={`object-cover transition-opacity duration-300
+                className={`md:object-cover transition-opacity duration-300
         ${imgToggle ? "opacity-0" : "opacity-100"}
         md:opacity-100 md:hover:opacity-0`}
                 priority

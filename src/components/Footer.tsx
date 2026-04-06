@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -53,15 +53,15 @@ export default function Footer() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
                         {/* Logo */}
-                        <div>
-                            <div className="relative h-24 w-56 mb-4">
+                        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                            <div className="relative h-24 w-56 mb-4 mx-auto md:mx-0">
                                 <Image src="/logo.png" alt="RBV Logo" fill className="object-contain" />
                             </div>
-                            <p className="mb-6 text-md leading-relaxed">
+                            <p className="mb-6 text-md leading-relaxed max-w-sm">
                                 Rooted in Canadian innovation, RBV delivers premium veterinary
                                 healthcare and wellness products.
                             </p>
-                            <div className="flex gap-6">
+                            <div className="flex gap-6 justify-center md:justify-start w-full">
                                 <div className="space-y-3 text-center">
                                     <span className="text-[10px] text-center font-bold text-[#9444A1] uppercase tracking-widest">RBV</span>
                                     <div className="flex gap-3">
@@ -91,8 +91,7 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        {/* Products */}
-                        <div>
+                        <div className="text-center md:text-left">
                             <h4 className="text-xl font-bold mb-6">Products</h4>
 
                             <FooterProductDropdown
@@ -125,18 +124,16 @@ export default function Footer() {
                             />
                         </div>
 
-                        {/* Links */}
-                        <div>
+                        <div className="text-center md:text-left">
                             <h4 className="text-xl font-bold mb-6">Links</h4>
-                            <ul className="space-y-4 text-sm">
+                            <ul className="space-y-4 text-sm list-none p-0">
                                 <FooterLink href="/#about">About Us</FooterLink>
                                 <FooterLink href="/#terms">Terms & Conditions</FooterLink>
                                 <FooterLink href="/#privacy">Privacy Policy</FooterLink>
                             </ul>
                         </div>
 
-                        {/* Contact */}
-                        <div>
+                        <div className="text-center md:text-left">
                             <h4 className="text-xl font-bold mb-6">Contact</h4>
                             <ContactItem icon={<MapPin />} label="Address" value="Yangon, Myanmar" />
                             <ContactItem icon={<Phone />} label="Phone" value="+855 12 266 221" />
@@ -172,20 +169,20 @@ function FooterProductDropdown({
     onToggle: () => void;
 }) {
     return (
-        <div className="mb-4">
+        <div className="mb-4 text-center md:text-left">
             <button
                 onClick={onToggle}
-                className="w-full flex justify-between items-center font-medium"
+                className="w-full flex justify-center md:justify-between items-center font-medium gap-2"
             >
                 {title}
-                <span>{isOpen ? "−" : "+"}</span>
+                <span className="text-lg">{isOpen ? "−" : "+"}</span>
             </button>
 
             {isOpen && (
-                <ul className="mt-3 space-y-2 pl-2">
+                <ul className="mt-3 space-y-2 md:pl-2 list-none p-0">
                     {items.map((item, i) => (
                         <li key={i}>
-                            <Link href={item.href} className="text-sm text-gray-600 hover:text-black">
+                            <Link href={item.href} className="text-sm text-gray-600 hover:text-black transition-colors">
                                 {item.label}
                             </Link>
                         </li>
@@ -228,13 +225,13 @@ function ContactItem({
     value: string;
 }) {
     return (
-        <div className="flex gap-4 mb-4">
-            <div className="h-10 w-10 flex items-center justify-center">
+        <div className="flex flex-col items-center md:flex-row md:items-start gap-4 mb-6 md:mb-4">
+            <div className="h-10 w-10 flex items-center justify-center bg-[#9444A1]/5 rounded-full text-[#9444A1]">
                 {icon}
             </div>
-            <div>
-                <p className="text-xs">{label}</p>
-                <p className="text-sm font-medium">{value}</p>
+            <div className="text-center md:text-left">
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{label}</p>
+                <p className="text-sm font-semibold">{value}</p>
             </div>
         </div>
     );

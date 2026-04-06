@@ -44,49 +44,49 @@ export default function ComparePage() {
     return (
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
-           <section className="py-6 md:py-8 bg-gray-50 overflow-hidden font-sans">
-    <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center text-center mx-auto">
+            <section className="py-6 md:py-8 bg-gray-50 overflow-hidden font-sans">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col items-center text-center mx-auto">
 
-            {/* IMAGE */}
-            <div className="relative w-full mb-8 md:mb-12 flex justify-center items-center">
-                <div className="relative w-full h-[180px] sm:h-[220px] md:h-[300px] 2xl:h-[400px] z-10">
-                    <Image
-                        src="/bgflura.png"
-                        alt="RBV Main Product"
-                        fill
-                        className="object-contain md:object-cover 2xl:object-contain"
-                        priority
-                    />
+                        {/* IMAGE */}
+                        <div className="relative w-full mb-8 md:mb-12 flex justify-center items-center">
+                            <div className="relative w-full h-[180px] sm:h-[220px] md:h-[300px] 2xl:h-[400px] z-10">
+                                <Image
+                                    src="/bgflura.png"
+                                    alt="RBV Main Product"
+                                    fill
+                                    className="object-contain md:object-cover 2xl:object-contain"
+                                    priority
+                                />
+                            </div>
+                        </div>
+
+                        {/* HEADING */}
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 md:mb-6 leading-tight">
+                            FluraMed{" "}
+                            <span className="block sm:inline text-lg sm:text-2xl font-medium">
+                                (Fluralaner Chewable Tablets)
+                            </span>
+                        </h1>
+
+                        {/* DESCRIPTION */}
+                        <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl px-2 sm:px-4">
+                            Say goodbye to the monthly hassle of{" "}
+                            <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">
+                                flea
+                            </span>{" "}
+                            and{" "}
+                            <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">
+                                tick
+                            </span>{" "}
+                            treatments!
+                            <br className="hidden sm:block" />
+                            One FLuraMed dose protects, <span className="font-semibold">3× longer</span> than monthly treatments.
+                        </p>
+
+                    </div>
                 </div>
-            </div>
-
-            {/* HEADING */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 md:mb-6 leading-tight">
-                FluraMed{" "}
-                <span className="block sm:inline text-lg sm:text-2xl font-medium">
-                    (Fluralaner Chewable Tablets)
-                </span>
-            </h1>
-
-            {/* DESCRIPTION */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl px-2 sm:px-4">
-                Say goodbye to the monthly hassle of{" "}
-                <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">
-                    flea
-                </span>{" "}
-                and{" "}
-                <span className="font-bold text-[#9444A1] border-b-2 border-[#9444A1]/30">
-                    tick
-                </span>{" "}
-                treatments!
-                <br className="hidden sm:block" />
-                One FLuraMed dose protects, <span className="font-semibold">3× longer</span> than monthly treatments.
-            </p>
-
-        </div>
-    </div>
-</section>
+            </section>
 
 
             {/* Feature Grid */}

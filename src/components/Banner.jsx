@@ -55,16 +55,16 @@ export default function Banner() {
     }, [nextSlide]);
 
     return (
-        <section className="w-full px-4 py-6 bg-white">
+        <section className="w-full px-3 sm:px-4 py-4 sm:py-6 bg-white">
             {/* HERO BANNER */}
             <div className="container mx-auto relative group">
-                {/* Image Container with overflow hidden */}
-                <div className="relative h-[45vh] w-full overflow-hidden bg-gray-100 rounded-[2rem] shadow-sm">
+                <div className="relative h-[14vh] sm:h-[45vh] w-full overflow-hidden bg-gray-100 rounded-2xl sm:rounded-[2rem] shadow-sm">
+
                     {/* Slides */}
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                            className={`absolute inset-0 transition-opacity duration-700 ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                                 }`}
                         >
                             <Image
@@ -72,86 +72,64 @@ export default function Banner() {
                                 alt={image.alt}
                                 fill
                                 priority={index === 0}
-                                className="object-cover"
+                                className="md:object-cover"
                             />
-
                         </div>
                     ))}
 
                     {/* Indicators */}
-                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-1.5">
                         {images.map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`w-10 h-1.5 rounded-full transition-all ${index === currentIndex ? "bg-white scale-110 shadow-md" : "bg-white/40 hover:bg-white/60"
+                                className={`h-1 rounded-full transition-all ${index === currentIndex
+                                    ? "w-6 bg-white"
+                                    : "w-3 bg-white/50"
                                     }`}
-                                aria-label={`Go to slide ${index + 1}`}
                             />
                         ))}
                     </div>
-                </div>
 
-                {/* Navigation Buttons - Positioned outside the image container */}
-                <button
-                    onClick={prevSlide}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-30 p-3 rounded-full bg-white shadow-lg text-[#9444A1] hover:bg-[#9444A1] hover:text-white transition-all duration-300 transform md:hover:scale-110 active:scale-95"
-                    aria-label="Previous slide"
-                >
-                    <ChevronLeft size={28} />
-                </button>
-                <button
-                    onClick={nextSlide}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-30 p-3 rounded-full bg-white shadow-lg text-[#9444A1] hover:bg-[#9444A1] hover:text-white transition-all duration-300 transform md:hover:scale-110 active:scale-95"
-                    aria-label="Next slide"
-                >
-                    <ChevronRight size={28} />
-                </button>
+                    {/* Navigation Buttons (INSIDE for mobile) */}
+                    <button
+                        onClick={prevSlide}
+                        className="hidden md:block absolute left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 rounded-full bg-white shadow text-[#9444A1]"
+                    >
+                        <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
+                    </button>
+
+                    <button
+                        onClick={nextSlide}
+                        className="hidden md:block absolute right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 rounded-full bg-white shadow text-[#9444A1]"
+                    >
+                        <ChevronRight size={20} className="sm:w-6 sm:h-6" />
+                    </button>
+                </div>
             </div>
 
             {/* BOTTOM PROMO STRIP */}
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-100 p-4 rounded-lg container mx-auto">
+            <div className="mt-4 sm:mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 bg-gray-100 p-3 sm:p-4 rounded-lg container mx-auto">
 
-                {/* Sign In Card */}
-                <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
-                        <img src="/rbv/1.png" alt="" />
+                {[
+                    { img: "/rbv/1.png", text: "Cruelty Free" },
+                    { img: "/rbv/2.png", text: "Pet Friendly Products" },
+                    { img: "/rbv/3.png", text: "No Harmful Additives" },
+                    { img: "/rbv/4.png", text: "Responsibly made" },
+                ].map((item, i) => (
+                    <div
+                        key={i}
+                        className="flex items-center gap-3 bg-white rounded-xl px-3 py-3 sm:px-6 sm:py-5 shadow-sm"
+                    >
+                        <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
+                            <img src={item.img} alt="" />
+                        </div>
+                        <p className="text-xs sm:text-sm font-semibold text-[#9444A1] leading-tight">
+                            {item.text}
+                        </p>
                     </div>
-                    <div>
-                        <p className="font-semibold text-[#9444A1]">Cruelty Free</p>
-                    </div>
-                </div>
-
-                {/* Autoship */}
-                <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
-                        <img src="/rbv/2.png" alt="" />
-                    </div>
-                    <div>
-                        <p className="font-semibold text-[#9444A1]">Pet Friendly Products</p>
-                    </div>
-                </div>
-
-                {/* Pharmacy */}
-                <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
-                        <img src="/rbv/3.png" alt="" />
-                    </div>
-                    <div>
-                        <p className="font-semibold text-[#9444A1]">No Harmful Additives</p>
-                    </div>
-                </div>
-
-                {/* Pharmacy */}
-                <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-sm">
-                    <div className="w-12 h-12 rounded-full bg-[#9444A1] flex items-center justify-center p-1">
-                        <img src="/rbv/4.png" alt="" />
-                    </div>
-                    <div>
-                        <p className="font-semibold text-[#9444A1]">Responsibly made for pets</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
-    )
+    );
 }
