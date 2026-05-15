@@ -37,11 +37,11 @@ const DealsSection = ({
     }, []);
 
     const scrollRight = () => {
-        scrollRef.current?.scrollBy({ left: 340, behavior: 'smooth' });
+        scrollRef.current?.scrollBy({ left: 380, behavior: 'smooth' });
     };
 
     const scrollLeft = () => {
-        scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
+        scrollRef.current?.scrollBy({ left: -380, behavior: 'smooth' });
     };
 
     // Close mobile hover image when scrolling
@@ -71,21 +71,20 @@ const DealsSection = ({
                                 setActiveId(activeId === deal.id ? null : deal.id)
                             }
                             className="
-        group
-        min-w-[210px] sm:min-w-[300px]
-        md:max-w-[450px]
-        flex-shrink-0
-        flex flex-col
-        bg-white
-        rounded-2xl
-        overflow-hidden
-        transition-transform
-        md:hover:-translate-y-1
-        cursor-pointer
-        snap-center
-    "
+                                group
+                                w-[280px] sm:w-[320px] md:w-[360px]
+                                flex-shrink-0
+                                flex flex-col
+                                bg-white
+                                rounded-2xl
+                                overflow-hidden
+                                transition-transform
+                                md:hover:-translate-y-1
+                                cursor-pointer
+                                snap-center
+                            "
                         >
-                            <div className="relative w-full h-[400px] sm:h-[400px] md:h-[65vh] p-2 md:p-3">
+                            <div className="relative w-full aspect-square p-2 md:p-3">
                                 <div className="relative w-full h-full rounded-xl overflow-hidden">
 
                                     {/* BASE IMAGE */}
@@ -93,7 +92,7 @@ const DealsSection = ({
                                         src={deal.image}
                                         alt={deal.title}
                                         fill
-                                        className="md:object-cover rounded-xl"
+                                        className="object-cover rounded-xl"
                                     />
 
                                     {/* HOVER / TAP IMAGE */}

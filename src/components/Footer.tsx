@@ -135,8 +135,8 @@ export default function Footer() {
 
                         <div className="text-center md:text-left">
                             <h4 className="text-xl font-bold mb-6">Contact</h4>
-                            <ContactItem icon={<MapPin />} label="Address" value="Yangon, Myanmar" />
-                            <ContactItem icon={<Phone />} label="Phone" value="+855 12 266 221" />
+                            <ContactItem icon={<MapPin />} label="Address" value="63 Meadowridge St,  Kitchener, ON, N2P 0E2 Canada" />
+                            <ContactItem icon={<Phone />} label="Phone" value="+855 12266221" />
                             <ContactItem icon={<Mail />} label="Email" value="vet@rbiomeds.com" />
                         </div>
                     </div>
@@ -147,7 +147,7 @@ export default function Footer() {
                         © {new Date().getFullYear()} RBV. All Rights Reserved.
                     </p>
                     <p className="text-white text-xs tracking-wider uppercase font-medium">
-                        Powered by <Link href="https://rbshstudio.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-4">RBSH STUDIO</Link>
+                        Powered by RBV Canada
                     </p>
                 </div>
             </div>

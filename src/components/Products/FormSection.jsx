@@ -20,7 +20,7 @@ export default function FormSection() {
                         border border-gray-100
                     ">
                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6">
-                            Global Bulk Order Inquiry
+                            Distrbution Inquieries from global bulk order inquiry
                         </h3>
 
                         <form className="space-y-3 sm:space-y-4">

@@ -16,7 +16,7 @@ export default function ChoSection() {
 
                         <header>
                             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
-                                <span className="text-[#9444A1]">Duke</span> <br />
+                                <span className="text-[#9444A1]"> Duke Rawal.</span> <br />
                                 <span className="text-lg sm:text-2xl md:text-4xl font-semibold">
                                     Chief Happiness Officer (CHO)
                                 </span>
@@ -63,7 +63,7 @@ export default function ChoSection() {
                     >
                         {/* FIRST IMAGE */}
                         <Image
-                            src="/cho.png"
+                            src="/duke1.png"
                             alt="CHO"
                             fill
                             priority
@@ -73,11 +73,11 @@ export default function ChoSection() {
 
                         {/* SECOND IMAGE */}
                         <Image
-                            src="/duke.png"
+                            src="/duke1.png"
                             alt="Duke"
                             fill
-                            className={`object-cover transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"
-                                } lg:group-hover:opacity-100`}
+                            className={`object-cover transition-opacity duration-500
+                                lg:group-hover:opacity-100`}
                         />
                     </div>
                 </div>

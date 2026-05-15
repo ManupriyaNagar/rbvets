@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import CategorySection from "@/components/CategorySection";
 import Features from "@/components/Features";
 import About from "@/components/About";
 import RBVApart from "@/components/RBVApart";
@@ -8,7 +9,7 @@ import Highlights from "@/components/Highlights";
 import Feedback from "@/components/Feedback";
 import Banner from "@/components/Banner";
 import Petamour from "@/components/Petamour";
-import DealsSection from "@/components/DealsSection";
+import CategoryDealsWrapper from "@/components/CategoryDealsWrapper";
 import Mission from "@/components/Mission";
 import ChoSection from "@/components/ChoSection";
 
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+
       <Features />
       <ChoSection />
       <div id="about" className="scroll-mt-20">
@@ -28,8 +30,9 @@ export default function Home() {
       </div>
       <Highlights />
       <Banner />
+
       <Petamour />
-      <DealsSection />
+      <CategoryDealsWrapper />
       <Feedback />
     </div>
   );
