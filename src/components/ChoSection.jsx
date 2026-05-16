@@ -16,7 +16,7 @@ export default function ChoSection() {
 
                         <header>
                             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
-                                <span className="text-[#9444A1]"> Duke Rawal.</span> <br />
+                                <span className="text-[#9444A1]"> Duke Rawal</span> <br />
                                 <span className="text-lg sm:text-2xl md:text-4xl font-semibold">
                                     Chief Happiness Officer (CHO)
                                 </span>

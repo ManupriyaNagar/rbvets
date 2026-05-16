@@ -6,14 +6,7 @@ import Link from 'next/link';
 import { ChevronRight, ChevronLeft, ArrowRight } from 'lucide-react';
 
 const DealsSection = ({
-    deals = [
-        { id: 1, mainimage: '/RBVWEbsite/1/Lifestyle.jpg', hovermainimg: "/fop/1.png", title: "No-Tick Spray", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=No-tick+Spray" },
-        { id: 2, mainimage: '/RBVWEbsite/2/Lifestyle.jpg', hovermainimg: "/fop/2.png", title: "Entrovet Sachets", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Entrovet+Sachets" },
-        { id: 3, mainimage: '/RBVWEbsite/3/Lifestyle.jpg', hovermainimg: "/fop/3.png", title: "RehydraPet Sachets", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=RehydraPet+Sachets" },
-        { id: 4, mainimage: '/RBVWEbsite/4/Lifestyle.jpg', hovermainimg: "/fop/4.png", title: "Liver Med", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Liver+Med" },
-        { id: 5, mainimage: '/RBVWEbsite/5/Lifestyle.jpg', hovermainimg: "/fop/5.png", title: "Bone & Joint Syrup", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Bone+%26+Joint+Syrup" },
-        { id: 6, mainimage: '/RBVWEbsite/6/Lifestyle.jpg', hovermainimg: "/fop/6.png", title: "Skin & Coat Syrup", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Skin+%26+Coat+Syrup" },
-    ]
+    deals = []
 }) => {
 
     const scrollRef = useRef(null);

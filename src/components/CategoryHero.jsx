@@ -2,16 +2,27 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 export default function CategoryHero({ categoryTitle, products }) {
   const [active, setActive] = useState(products[0]);
   const [imgToggle, setImgToggle] = useState(false);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
+    const productName = searchParams.get("product");
+    if (productName && products && products.length > 0) {
+        const foundProduct = products.find(p => p.title === productName);
+        if (foundProduct) {
+            setActive(foundProduct);
+            return;
+        }
+    }
+    
     if (products && products.length > 0) {
         setActive(products[0]);
     }
-  }, [products]);
+  }, [products, searchParams]);
 
   if (!products || products.length === 0) return null;
 

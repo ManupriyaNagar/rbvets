@@ -5,11 +5,11 @@ export const categoryProducts = {
             {
                 title: "DEOMIST (200 ML)",
                 tagline: "Natural Perfume",
-                image: "/2sidefopbop/6.png",
+                image: "/2sidefopbop/60.png",
                 hoverimg: "/2sidefopbop/9.png",
                 mainimage: "/rbvfront/17.png",
                 hovermainimg: "/rbvfront/18.png",
-                image1: "/RBVWEbsite/1/Features.jpg",
+                image1: "/PosterFeatures/2.png",
                 description: "COMPOSITION: A premium blend featuring Green Tea Leaf Extract, Licorice Extract, Coconut Oil, Shea Butter, and Cucumber Fruit Extract, enriched with Omega 3 & 6, Panthenol, and Vitamin E.",
                 description1: "INDICATION: Formulated for pets with dry, itchy, or sensitive skin. Ideal for managing seasonal shedding, dull coats, and minor skin redness or irritation.",
                 description2: "USE: Apply to damp or dry skin and coat. Gently massage and leave on (no rinse required). Use 2–3 times a week or as directed by a veterinarian."
@@ -18,8 +18,8 @@ export const categoryProducts = {
                 title: "NO-TICK SPRAY",
                 tagline: "Heal, Protect, and Soothe Your Cat's Skin Naturally",
                 image: "/2sidefopbop/8.png",
-                hoverimg: "/RBVWEbsite/1/BOP.jpg",
-                image1: "/2sidefopbop/9.png",
+                hoverimg: "/2sidefopbop/9.png",
+                image1: "/PosterFeatures/1.png",
                 mainimage: "/rbvfront/21.png",
                 hovermainimg: "/rbvfront/22.png",
                 description: "COMPOSITION: A potent botanical blend featuring Karanj (4.3%), Neem (2%), Guducchhi (2.6%), Gokshur (2.6%), Triphala (1%), and Yashtimadhu (1%), with Purified Datura.",
@@ -50,34 +50,25 @@ export const categoryProducts = {
                 description1: "INDICATION: Specially formulated for dry, chapped, or cracked paws. Provides a protective barrier against extreme weather and rough surfaces while soothing minor injuries.",
                 description2: "USE: Apply a thin layer of gel over the affected area and massage gently for 5–10 minutes until absorbed. Repeat twice daily or as advised. Do not apply to open wounds."
             },
-            {
-                title: "SELAMED (200 ML)",
-                tagline: "Skin & Coat Care",
-                image: "/2sidefopbop/12.png",
-                hoverimg: "/2sidefopbop/16.png",
-                image1: "/RBVWEbsite/1/Features.jpg",
-                mainimage: "/rbvfront/33.png",
-                hovermainimg: "/rbvfront/34.png",
-                description: "COMPOSITION: Medicated spray/wash for skin conditions.",
-                description1: "INDICATION: Dermatological health support.",
-                description2: "USE: As directed by a veterinarian."
-            },
-            {
-                title: "TICK-FREE SPRAY",
-                tagline: "Complete Pest Protection",
-                image: "/RBVWEbsite/1/FOP.jpg",
-                hoverimg: "/RBVWEbsite/1/BOP.jpg",
-                image1: "/RBVWEbsite/1/Features.jpg",
-                description: "COMPOSITION: Powerful anti-parasitic treatment.",
-                description1: "INDICATION: Complete tick and flea protection.",
-                description2: "USE: Spray on the body once or twice a week."
-            },
+
+            // {
+            //     title: "TICK-FREE SPRAY",
+            //     tagline: "Complete Pest Protection",
+            //     image: "/RBVWEbsite/1/FOP.jpg",
+            //     hoverimg: "/RBVWEbsite/1/BOP.jpg",
+            //     image1: "/RBVWEbsite/1/Features.jpg",
+            //     description: "COMPOSITION: Powerful anti-parasitic treatment.",
+            //     description1: "INDICATION: Complete tick and flea protection.",
+            //     description2: "USE: Spray on the body once or twice a week."
+            // },
             {
                 title: "Skin & Coat Syrup",
                 tagline: "Skin and coat health",
-                image: "/RBVWEbsite/6/FOP.jpg",
-                hoverimg: "/RBVWEbsite/6/BOP.jpg",
+                image: "/2sidefopbop/12.png",
+                hoverimg: "/2sidefopbop/16.png",
                 image1: "/PosterFeatures/5.png",
+                mainimage: "/rbvfront/33.png",
+                hovermainimg: "/rbvfront/34.png",
                 description: "COMPOSITION: Each 15 ml contains Omega 3, 6, & 9 (8000 mg), Vitamins A, E, D3, and B5, plus Biotin, Zinc Sulphate, Selenium, and CoQ10.",
                 description1: "INDICATION: Promotes comprehensive skin and coat health. Supports healthy skin, a shiny coat, and strong nails while helping with dry skin and excessive shedding.",
                 description2: "USE: Can be added directly to food. Shake well before use. Administer dosage based on pet size (1.5 ml to 10 ml) twice daily or as advised by a veterinarian."
@@ -114,8 +105,8 @@ export const categoryProducts = {
             {
                 title: "Orthocare Tablets",
                 tagline: "Bone and joint support",
-                image: "/RBVWEbsite/5/FOP.jpg",
-                hoverimg: "/RBVWEbsite/5/BOP.jpg",
+                image: "/2sidefopbop/4.png",
+                hoverimg: "/2sidefopbop/5.png",
                 image1: "/PosterFeatures/8.png",
                 mainimage: "/rbvfront/9.png",
                 hovermainimg: "/rbvfront/10.png",
@@ -178,8 +169,8 @@ export const categoryProducts = {
 
 
 
-                mainimage: "/rbvfront/8.png",
-                hovermainimg: "/rbvfront/9.png",
+                mainimage: "/rbvfront/7.png",
+                hovermainimg: "/rbvfront/8.png",
                 description: "COMPOSITION: Astragalus Root (120 mg), Rehmannia Glutinosa (100 mg), Cordyceps Sinensis (100 mg), and L-Arginine (100 mg), fortified with Vitamin B-complex, Folic Acid, and Potassium.",
                 description1: "INDICATION: Targeted kidney support and detoxification. Helps maintain long-term kidney health and supports optimal renal function in pets experiencing kidney issues or age-related decline.",
                 description2: "USE: For oral consumption. Tablets can be fed directly or mixed with the pet's food. Follow weight-based guidelines (½ to 4 tablets daily) or as directed by a veterinarian."

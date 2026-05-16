@@ -11,7 +11,7 @@ export default function CategoryDealsWrapper() {
     const initialCategory = allCategories[0];
     const [activeCategory, setActiveCategory] = useState(initialCategory);
 
-    const transformProductsToDeals = (products) => {
+    const transformProductsToDeals = (products, categorySlug) => {
         return products.map((product, index) => ({
             id: index + 1,
             image: product.image,
@@ -20,12 +20,12 @@ export default function CategoryDealsWrapper() {
             hovermainimg: product.hovermainimg || product.hoverimg,
             title: product.title,
             tagline: product.tagline,
-            link: `/product?service=${encodeURIComponent(product.title)}`
+            link: `/category/${categorySlug}?product=${encodeURIComponent(product.title)}`
         }));
     };
 
     const currentDeals = categoryProducts[activeCategory] 
-        ? transformProductsToDeals(categoryProducts[activeCategory].products)
+        ? transformProductsToDeals(categoryProducts[activeCategory].products, activeCategory)
         : [];
 
     return (
