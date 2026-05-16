@@ -7,12 +7,12 @@ import { ChevronRight, ChevronLeft, ArrowRight } from 'lucide-react';
 
 const DealsSection = ({
     deals = [
-        { id: 1, image: '/RBVWEbsite/1/Lifestyle.jpg', hoverimg: "/fop/1.png", title: "No-Tick Spray", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=No-tick+Spray" },
-        { id: 2, image: '/RBVWEbsite/2/Lifestyle.jpg', hoverimg: "/fop/2.png", title: "Entrovet Sachets", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Entrovet+Sachets" },
-        { id: 3, image: '/RBVWEbsite/3/Lifestyle.jpg', hoverimg: "/fop/3.png", title: "RehydraPet Sachets", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=RehydraPet+Sachets" },
-        { id: 4, image: '/RBVWEbsite/4/Lifestyle.jpg', hoverimg: "/fop/4.png", title: "Liver Med", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Liver+Med" },
-        { id: 5, image: '/RBVWEbsite/5/Lifestyle.jpg', hoverimg: "/fop/5.png", title: "Bone & Joint Syrup", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Bone+%26+Joint+Syrup" },
-        { id: 6, image: '/RBVWEbsite/6/Lifestyle.jpg', hoverimg: "/fop/6.png", title: "Skin & Coat Syrup", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Skin+%26+Coat+Syrup" },
+        { id: 1, mainimage: '/RBVWEbsite/1/Lifestyle.jpg', hovermainimg: "/fop/1.png", title: "No-Tick Spray", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=No-tick+Spray" },
+        { id: 2, mainimage: '/RBVWEbsite/2/Lifestyle.jpg', hovermainimg: "/fop/2.png", title: "Entrovet Sachets", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Entrovet+Sachets" },
+        { id: 3, mainimage: '/RBVWEbsite/3/Lifestyle.jpg', hovermainimg: "/fop/3.png", title: "RehydraPet Sachets", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=RehydraPet+Sachets" },
+        { id: 4, mainimage: '/RBVWEbsite/4/Lifestyle.jpg', hovermainimg: "/fop/4.png", title: "Liver Med", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Liver+Med" },
+        { id: 5, mainimage: '/RBVWEbsite/5/Lifestyle.jpg', hovermainimg: "/fop/5.png", title: "Bone & Joint Syrup", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Bone+%26+Joint+Syrup" },
+        { id: 6, mainimage: '/RBVWEbsite/6/Lifestyle.jpg', hovermainimg: "/fop/6.png", title: "Skin & Coat Syrup", paragraph: "lorem ipsum dolor sit amet consectetur adipisicing elit", link: "/product?service=Skin+%26+Coat+Syrup" },
     ]
 }) => {
 
@@ -89,7 +89,7 @@ const DealsSection = ({
 
                                     {/* BASE IMAGE */}
                                     <Image
-                                        src={deal.image}
+                                        src={deal.mainimage}
                                         alt={deal.title}
                                         fill
                                         className="object-cover rounded-xl"
@@ -98,7 +98,7 @@ const DealsSection = ({
                                     {/* HOVER / TAP IMAGE */}
                                     {/* HOVER / TAP IMAGE */}
                                     <Image
-                                        src={deal.hoverimg}
+                                        src={deal.hovermainimg}
                                         alt={deal.title}
                                         fill
                                         className={`
@@ -122,9 +122,11 @@ const DealsSection = ({
                                     {deal.title}
                                 </h3>
 
-                                <p className="text-[#0f172a] text-xs sm:text-base line-clamp-2">
-                                    {deal.paragraph}
-                                </p>
+                                {deal.tagline && (
+                                    <span className="w-fit text-xs font-semibold text-[#9444A1] bg-[#9444A1]/10 px-2.5 py-1 rounded-full">
+                                        {deal.tagline}
+                                    </span>
+                                )}
 
                                 <Link
                                     href={deal.link}

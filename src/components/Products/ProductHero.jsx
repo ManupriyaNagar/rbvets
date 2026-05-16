@@ -6,11 +6,21 @@ import { useSearchParams } from "next/navigation";
 
 const services = [
   {
+    title: "DEOMIST (200 ML)",
+    image: "/RBVWEbsite/1/FOP.jpg",
+    hoverimg: "/RBVWEbsite/1/BOP.jpg",
+    image1: "/PosterFeatures/2.png",
+   
+    description: "COMPOSITION: A premium blend featuring Green Tea Leaf Extract, Licorice Extract, Coconut Oil, Shea Butter, and Cucumber Fruit Extract, enriched with Omega 3 & 6, Panthenol, and Vitamin E.",
+    description1: "INDICATION: Formulated for pets with dry, itchy, or sensitive skin. Ideal for managing seasonal shedding, dull coats, and minor skin redness or irritation.",
+    description2: "USE: Apply to damp or dry skin and coat. Gently massage and leave on (no rinse required). Use 2–3 times a week or as directed by a veterinarian.",
+  },
+  {
     title: "No-Tick Spray",
     image: "/RBVWEbsite/1/FOP.jpg",
     hoverimg: "/RBVWEbsite/1/BOP.jpg",
-    image1: "/RBVWEbsite/1/Features.jpg",
-    hoverimg1: "/RBVWEbsite/1/vs.jpg",
+    image1: "/PosterFeatures/1.png",
+
     description: "COMPOSITION : Each 10 ml Contains: Vitamin A 45000 IU, Vitamin D3 8000 IU, Calcium 1628 mg, Phosphorus 838.5 mg, Vitamin B12 5mg, Manganese 100 mg.",
     description1: "INDICATION : Joint health, bone development, and recovery.",
     description2: "USE: Supports bone and joint function, prevents deficiency in calcium and vitamin D.",
@@ -20,7 +30,7 @@ const services = [
     image: "/RBVWEbsite/2/FOP.jpg",
     hoverimg: "/RBVWEbsite/2/BOP.jpg",
     image1: "/RBVWEbsite/2/feature.jpg",
-    hoverimg1: "/RBVWEbsite/2/vs.jpg",
+
     description: "COMPOSITION : Lactobacillus plantarum, Lactobacillus rhamnosus, Lactobacillus acidophilus, Saccharomyces boulardii, Neem extract.",
     description1: "INDICATION : Digestive health.",
     description2: "USE: Probiotic formula to improve gut health and support digestion.",
@@ -30,7 +40,7 @@ const services = [
     image: "/RBVWEbsite/3/FOP.jpg",
     hoverimg: "/RBVWEbsite/3/BOP.jpg",
     image1: "/RBVWEbsite/3/feature.jpg",
-    hoverimg1: "/RBVWEbsite/3/vs.jpg",
+  
     description: "COMPOSITION : Each Serving Per 16.8g Sachets Contains: Vitamin B1 10 mcg, Vitamin B2 8 mcg, Vitamin B6 10 mcg, Vitamin B12 1 mcg, Vitamin E 15 mcg, Vitamin C 50 mg, Dextrose Anhydrous 11.15g, Sodium Chloride 2.15g, Potassium Di hydrogen 1.02g, Phosphate Glycino 1.55g, Citric Acid 0.12g, Potassium Citrate 0.03g, Taurine 60 mg, L-lysine 40 mg.",
     description1: "INDICATION : Electrolyte imbalance and hydration.",
     description2: "USE: Rehydrating pets and restoring lost electrolytes due to diarrhea or dehydration.",
@@ -40,7 +50,7 @@ const services = [
     image: "/RBVWEbsite/4/FOP.jpg",
     hoverimg: "/RBVWEbsite/4/BOP.jpg",
     image1: "/RBVWEbsite/4/features.jpg",
-    hoverimg1: "/RBVWEbsite/4/vs.jpg",
+
     description: "COMPOSITION : Liver Health Supplement that improves digestion and metabolism.",
     description1: "INDICATION :  Liver support.",
     description2: "USE: Aids in the detoxification and overall function of the liver.",
@@ -50,7 +60,7 @@ const services = [
     image: "/RBVWEbsite/5/BOP.jpg",
     hoverimg: "/RBVWEbsite/5/FOP.jpg",
     image1: "/RBVWEbsite/5/feature.jpg",
-    hoverimg1: "/RBVWEbsite/5/vs.jpg",
+
     description: "COMPOSITION : Each 10 ml Contains: Vitamin A 45000 IU, Vitamin D3 8000 IU, Calcium 1628 mg, Phosphorus 838.5 mg, Vitamin B12 5mg, Manganese 100 mg",
     description1: "INDICATION : Joint health, bone development, and recovery.",
     description2: "USE: Supports bone and joint function, prevents deficiency in calcium and vitamin D.",
@@ -60,7 +70,7 @@ const services = [
     image: "/RBVWEbsite/6/FOP.jpg",
     hoverimg: "/RBVWEbsite/6/BOP.jpg",
     image1: "/RBVWEbsite/6/features.jpg",
-    hoverimg1: "/RBVWEbsite/6/vs.jpg",
+
     description: "COMPOSITION : E Omega 3, 6, 9, Vitamin A, Vitamin E, Zinc Sulphate, Biotin, Vitamin B5, Inositol, Selenium, Vitamin D3, En Q10",
     description1: "INDICATION :Skin and coat health.",
     description2: "USE: Supports healthy skin, coat, and nails, helping with dry skin and shedding.",

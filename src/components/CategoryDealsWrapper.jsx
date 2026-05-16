@@ -16,8 +16,10 @@ export default function CategoryDealsWrapper() {
             id: index + 1,
             image: product.image,
             hoverimg: product.hoverimg,
+            mainimage: product.mainimage || product.image,
+            hovermainimg: product.hovermainimg || product.hoverimg,
             title: product.title,
-            paragraph: product.description1 || product.description,
+            tagline: product.tagline,
             link: `/product?service=${encodeURIComponent(product.title)}`
         }));
     };
