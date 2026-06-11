@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
@@ -9,7 +9,7 @@ import { categoryProducts } from "@/data/categoryProducts";
 // Flatten all products from all categories into a single array
 const services = Object.values(categoryProducts).flatMap(category => category.products);
 
-export default function ProductHero() {
+function ProductHeroContent() {
   const [active, setActive] = useState(services[0]);
   const [imgToggle, setImgToggle] = useState(false);
   const searchParams = useSearchParams();
@@ -184,5 +184,13 @@ export default function ProductHero() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function ProductHero() {
+  return (
+    <Suspense fallback={null}>
+      <ProductHeroContent />
+    </Suspense>
   );
 }

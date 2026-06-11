@@ -113,6 +113,10 @@ export default function Header(): JSX.Element {
                                     </span>
                                 </Link>
 
+
+
+
+
                                 <Link
                                     href="/about"
                                     className={`block px-4 py-3 rounded-lg ${isActive("/about")
@@ -137,6 +141,11 @@ export default function Header(): JSX.Element {
                         className={linkClass(isHashActive("#petamour"))}
                     >
                         Petamour
+                    </Link>
+
+
+                    <Link href="/pet-blogs" className={linkClass(isActive("/about"))}>
+                        Pet Blogs
                     </Link>
 
                     <Link href="/contact" className={linkClass(isActive("/contact"))}>

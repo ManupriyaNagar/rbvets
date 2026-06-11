@@ -17,14 +17,18 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <About />
+      <Mission />
 
       <Features />
-      <ChoSection />
+
       <div id="about" className="scroll-mt-20">
-        <About />
+
       </div>
-      <Mission />
+
       <RBVApart />
+      <ChoSection />
+
       <div id="products" className="scroll-mt-20">
         <ProductSpotlight />
       </div>

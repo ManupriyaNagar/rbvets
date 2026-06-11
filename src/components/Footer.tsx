@@ -10,10 +10,44 @@ import {
     Phone,
     Mail,
     ArrowRight,
+    Loader2,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Footer() {
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+    const handleSubscribe = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email) return;
+
+        setStatus("submitting");
+        try {
+            const formData = new FormData();
+            formData.append("access_key", "dadb38a5-7e64-425f-8def-7bf97e069b89");
+            formData.append("email", email);
+            formData.append("subject", "Welcome to the petamour world");
+            formData.append("from_name", "PetAmour");
+            formData.append("message", `A new subscriber has joined the PetAmour world: ${email}`);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                setStatus("success");
+                setEmail("");
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            setStatus("error");
+        }
+    };
 
     return (
         <footer className="relative bg-[#9444A1] pt-12 pb-8 overflow-hidden">
@@ -34,18 +68,60 @@ export default function Footer() {
                         96% of pet owners consider pets family <br /> RBV exists to protect that bond.
                     </h2>
 
-                    <div className="max-w-2xl mx-auto">
+                    <form onSubmit={handleSubscribe} className="max-w-2xl mx-auto">
                         <div className="flex items-center bg-[#953490]/20 border border-white/50 rounded-full p-2 pl-6 backdrop-blur-sm">
                             <input
                                 type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
                                 placeholder="Enter your email"
-                                className="bg-transparent border-none flex-grow text-white focus:outline-none placeholder:text-white/40"
+                                className="bg-transparent border-none flex-grow text-white focus:outline-none placeholder:text-white/40 text-sm md:text-base outline-none"
                             />
-                            <button className="bg-[#d7a463] text-white font-bold py-3 px-8 rounded-full flex items-center gap-2 hover:bg-[#c69352] transition">
-                                Subscribe <ArrowRight className="w-4 h-4" />
+                            <button
+                                type="submit"
+                                disabled={status === "submitting"}
+                                className="bg-[#d7a463] text-white font-bold py-3 px-8 rounded-full flex items-center gap-2 hover:bg-[#c69352] transition disabled:opacity-80 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap text-sm md:text-base"
+                            >
+                                {status === "submitting" ? (
+                                    <>
+                                        Subscribing...
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                    </>
+                                ) : (
+                                    <>
+                                        Subscribe <ArrowRight className="w-4 h-4" />
+                                    </>
+                                )}
                             </button>
                         </div>
-                    </div>
+
+                        {/* Status Message */}
+                        <div className="mt-3 h-6 flex justify-center items-center">
+                            <AnimatePresence mode="wait">
+                                {status === "success" && (
+                                    <motion.p
+                                        initial={{ opacity: 0, y: -5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -5 }}
+                                        className="text-green-300 font-semibold text-sm"
+                                    >
+                                        🎉 Welcome to the petamour world! Check your inbox for confirmation.
+                                    </motion.p>
+                                )}
+                                {status === "error" && (
+                                    <motion.p
+                                        initial={{ opacity: 0, y: -5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -5 }}
+                                        className="text-red-300 font-semibold text-sm"
+                                    >
+                                        ⚠️ Subscription failed. Please try again.
+                                    </motion.p>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    </form>
                 </div>
 
                 {/* Footer Card */}
@@ -135,9 +211,15 @@ export default function Footer() {
 
                         <div className="text-center md:text-left">
                             <h4 className="text-xl font-bold mb-6">Contact</h4>
-                            <ContactItem icon={<MapPin />} label="Address" value="63 Meadowridge St,  Kitchener, ON, N2P 0E2 Canada" />
-                            <ContactItem icon={<Phone />} label="Phone" value="+855 12266221" />
-                            <ContactItem icon={<Mail />} label="Email" value="vet@rbiomeds.com" />
+                            <ContactItem
+                                icon={<MapPin />}
+                                label="Address"
+                                value="63 Meadowridge St,  Kitchener, ON, N2P 0E2 Canada"
+                                href="https://maps.app.goo.gl/YbMnJrMUGU1xf9x18"
+                                target="_blank"
+                            />
+                            <ContactItem icon={<Phone />} label="Phone" value="+855 12266221" href="tel:+85512266221" />
+                            <ContactItem icon={<Mail />} label="Email" value="vetcare@rbiomeds.com" href="mailto:vetcare@rbiomeds.com" />
                         </div>
                     </div>
                 </div>
@@ -219,10 +301,14 @@ function ContactItem({
     icon,
     label,
     value,
+    href,
+    target,
 }: {
     icon: React.ReactNode;
     label: string;
     value: string;
+    href?: string;
+    target?: string;
 }) {
     return (
         <div className="flex flex-col items-center md:flex-row md:items-start gap-4 mb-6 md:mb-4">
@@ -231,7 +317,18 @@ function ContactItem({
             </div>
             <div className="text-center md:text-left">
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{label}</p>
-                <p className="text-sm font-semibold">{value}</p>
+                {href ? (
+                    <a
+                        href={href}
+                        target={target}
+                        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+                        className="text-sm font-semibold hover:text-[#9444A1] transition-colors hover:underline"
+                    >
+                        {value}
+                    </a>
+                ) : (
+                    <p className="text-sm font-semibold">{value}</p>
+                )}
             </div>
         </div>
     );

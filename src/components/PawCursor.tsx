@@ -67,7 +67,7 @@ export default function PawCursor() {
     }, [handleMouseMove]);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-[9999] overflow-hidden">
+        <div className="fixed  hidden md:block inset-0 pointer-events-none z-[9999] overflow-hidden">
             {/* Trail Footprints */}
             <AnimatePresence>
                 {trail.map((point) => (

@@ -46,7 +46,7 @@ export default function RBVApart() {
                                 {
                                     icon: <ShieldCheck size={22} />,
                                     title: "Global quality assurance",
-                                    text: "Products manufactured in certified, USFDA-registered and CGMP-compliant facilities, following strict international safety protocols.",
+                                    text: "Products manufactured in certified, USFDA/EU-GMP Grade facilities and CGMP-compliant facilities, following strict international safety protocols.",
                                 },
                                 {
                                     icon: <PawPrint size={22} />,
@@ -108,7 +108,7 @@ export default function RBVApart() {
                 ">
                     <div className="bg-white p-8 rounded-l-3xl border border-[#9444A1]/10">
                         <p className="text-2xl font-bold text-gray-900 hover:text-[#9444A1]">
-                            74% of pet owners are willing to invest more in foods with added health benefits, so our formulas combine taste with targeted wellness support.
+                            78% of pet owners are willing to invest more in foods with added health benefits, so our formulas combine taste with targeted wellness support.
                         </p>
                     </div>
                 </div>
@@ -117,9 +117,9 @@ export default function RBVApart() {
             {/* MOBILE BADGE (INLINE) */}
             <div className="lg:hidden px-6 pb-12">
                 <div className="bg-white p-6 rounded-3xl border border-[#9444A1]/10 shadow">
-                    <p className="text-base font-bold text-gray-900">
-                        74% of pet owners are willing to invest more in foods with added health benefits, so our formulas combine taste with targeted wellness support.
-                    </p>
+                <p className="text-base font-bold text-gray-900">
+  78% of dog owners are willing to pay more for healthier meals for their pets, which is why our formulas combine great taste with targeted wellness support.
+</p>
                 </div>
             </div>
         </section>

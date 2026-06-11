@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
-export default function CategoryHero({ categoryTitle, products }) {
+function CategoryHeroContent({ categoryTitle, products }) {
   const [active, setActive] = useState(products[0]);
   const [imgToggle, setImgToggle] = useState(false);
   const searchParams = useSearchParams();
@@ -184,5 +184,13 @@ export default function CategoryHero({ categoryTitle, products }) {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function CategoryHero(props) {
+  return (
+    <Suspense fallback={null}>
+      <CategoryHeroContent {...props} />
+    </Suspense>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <section className="relative w-full bg-white">
+        <section className="relative  py-10 w-full bg-white">
             <div className="
                 container mx-auto md:px-0 px-4
                 flex flex-col lg:flex-row
@@ -32,7 +32,7 @@ export default function About() {
                     px-6 py-8 sm:px-8 sm:py-10 lg:p-12
                     flex flex-col justify-center
                     text-white
-                    rounded-t-3xl md:rounded-3xl lg:rounded-r
+                    md:rounded-3xl lg:rounded-r
                 ">
                     <div className="max-w-2xl">
 
