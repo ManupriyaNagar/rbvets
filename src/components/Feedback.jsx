@@ -156,7 +156,7 @@ const Feedback = () => {
                         />
                     ))}
                 </div>
-                <div className='flex justify-center mt-12 -mb-20'>
+                <div className='flex justify-center mt-12 -mb-28'>
                     <img src="/feedback-img.png" alt="" className='w-full md:w-[70%] max-w-[800px] h-auto md:h-80 object-contain' />
                 </div>
             </div>

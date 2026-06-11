@@ -12,19 +12,139 @@ function CategoryHeroContent({ categoryTitle, products }) {
   useEffect(() => {
     const productName = searchParams.get("product");
     if (productName && products && products.length > 0) {
-        const foundProduct = products.find(p => p.title === productName);
-        if (foundProduct) {
-            setActive(foundProduct);
-            return;
-        }
+      const foundProduct = products.find(p => p.title === productName);
+      if (foundProduct) {
+        setActive(foundProduct);
+        return;
+      }
     }
-    
+
     if (products && products.length > 0) {
-        setActive(products[0]);
+      setActive(products[0]);
     }
   }, [products, searchParams]);
 
   if (!products || products.length === 0) return null;
+
+  const hasSecondaryImage = !!active.image1;
+
+  if (!hasSecondaryImage) {
+    return (
+      <section className="bg-white py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+
+            {/* LEFT CONTENT: Sidebar */}
+            <div className="md:max-w-[300px] w-full flex-shrink-0">
+              <h2 className="text-3xl font-semibold text-gray-900 relative inline-block">
+                {categoryTitle}
+                <span className="absolute left-0 -bottom-2 w-12 h-[3px] bg-[#9444A1] rounded-full"></span>
+              </h2>
+
+              {/* MOBILE TABS */}
+              <div className="md:hidden mt-6 flex gap-3 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
+                {products.map((product) => (
+                  <button
+                    key={product.title}
+                    onClick={() => {
+                      setActive(product);
+                      setImgToggle(false);
+                    }}
+                    className={`whitespace-nowrap px-6 py-2.5 rounded-full border transition-all text-sm font-medium
+                      ${active.title === product.title
+                        ? "bg-[#9444A1] text-white border-[#9444A1] shadow-sm"
+                        : "bg-white text-gray-600 border-gray-300"
+                      }`}
+                  >
+                    {product.title}
+                  </button>
+                ))}
+              </div>
+
+              {/* DESKTOP SIDEBAR */}
+              <div className="hidden sm:block mt-10 space-y-4 w-full">
+                {products.map((product) => (
+                  <button
+                    key={product.title}
+                    onClick={() => setActive(product)}
+                    className={`w-full text-left px-6 py-3.5 rounded-full border transition-all duration-300 font-medium text-lg
+                      ${active.title === product.title
+                        ? "bg-[#9444A1] text-white border-[#9444A1] shadow-md"
+                        : "bg-white text-gray-500 border-gray-300 hover:border-[#9444A1] hover:text-[#9444A1]"
+                      }`}
+                  >
+                    {product.title}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT CONTENT: Details and single featured image */}
+            <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+              {/* Info Column */}
+              <div className="flex flex-col gap-6">
+                <div>
+                  <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
+                    {active.title}
+                  </h1>
+                  {active.tagline && (
+                    <p className="text-[#9444A1] font-semibold text-base leading-snug">
+                      {active.tagline}
+                    </p>
+                  )}
+                </div>
+
+                <div className="relative w-full flex-col rounded-2xl bg-[#9444A1]/5 p-6 flex gap-4 shadow-sm">
+                  {[active.description, active.description1, active.description2].map(
+                    (text, index) => {
+                      if (!text) return null;
+                      const colonIndex = text.indexOf(":");
+                      const isUpperCaseLabel =
+                        colonIndex !== -1 &&
+                        text.substring(0, colonIndex).toUpperCase() ===
+                        text.substring(0, colonIndex);
+
+                      return (
+                        <p key={index} className="text-gray-800 leading-relaxed">
+                          {isUpperCaseLabel ? (
+                            <>
+                              <span className="text-base font-bold text-black block mb-0.5">
+                                {text.substring(0, colonIndex + 1)}
+                              </span>
+                              <span className="text-sm font-medium text-gray-700">
+                                {text.substring(colonIndex + 1)}
+                              </span>
+                            </>
+                          ) : (
+                            <span className="text-sm font-medium text-gray-700">
+                              {text}
+                            </span>
+                          )}
+                        </p>
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+
+              {/* Image Column */}
+              <div className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-md bg-gray-50 border border-gray-100 flex items-center justify-center">
+                <Image
+                  src={active.image}
+                  alt={active.title}
+                  fill
+                  className="object-contain p-2"
+                  priority
+                />
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="bg-white py-16 px-4">
@@ -39,7 +159,7 @@ function CategoryHeroContent({ categoryTitle, products }) {
               {categoryTitle}
               <span className="absolute left-0 -bottom-2 w-12 h-[3px] bg-[#9444A1] rounded-full"></span>
             </h2>
-            
+
             {/* MOBILE TABS */}
             <div className="md:hidden mt-6 flex gap-3 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
               {products.map((product) => (

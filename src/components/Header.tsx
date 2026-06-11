@@ -137,7 +137,7 @@ export default function Header(): JSX.Element {
                     </div>
 
                     <Link
-                        href="/#petamour"
+                        href="/petamour"
                         className={linkClass(isHashActive("#petamour"))}
                     >
                         Petamour

@@ -7,9 +7,10 @@ import RBVApart from "@/components/RBVApart";
 import ProductSpotlight from "@/components/ProductSpotlight";
 import Highlights from "@/components/Highlights";
 import Feedback from "@/components/Feedback";
-import Banner from "@/components/Banner";
-import Petamour from "@/components/Petamour";
-import CategoryDealsWrapper from "@/components/CategoryDealsWrapper";
+import ProductRow from "@/components/Products/ProductRow";
+// import Banner from "@/components/Banner";
+// import Petamour from "@/components/Petamour";
+// import CategoryDealsWrapper from "@/components/CategoryDealsWrapper";
 import Mission from "@/components/Mission";
 import ChoSection from "@/components/ChoSection";
 
@@ -33,10 +34,11 @@ export default function Home() {
         <ProductSpotlight />
       </div>
       <Highlights />
-      <Banner />
+      <ProductRow />
+      {/* <Banner />
 
       <Petamour />
-      <CategoryDealsWrapper />
+      <CategoryDealsWrapper /> */}
       <Feedback />
     </div>
   );

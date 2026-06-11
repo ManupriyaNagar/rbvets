@@ -52,7 +52,7 @@ export default function FormSection() {
                         border border-gray-100
                     ">
                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6">
-                            Distribution Inquiries from global bulk order inquiry
+                            Global Distribution Enquiry
                         </h3>
 
                         <form onSubmit={onSubmit} className="space-y-4">
